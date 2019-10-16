@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using static HateksPurchasing.HateksPurchasingDataSet;
+using HateksPurchasing.Helper;
 
 namespace HateksPurchasing
 {
@@ -71,7 +72,7 @@ namespace HateksPurchasing
             {
                 if (isNew)
                 {
-                    draftTableAdapter1.Insert(Int32.Parse(lookupDraftType.EditValue.ToString()), Int32.Parse(lookupUnit.EditValue.ToString()), 1, double.Parse(txtAmount.Text), txtDescp.Text, null, null, null, null, DateTime.Now, Int32.Parse(lookupState.EditValue.ToString()), null);
+                    draftTableAdapter1.Insert(Int32.Parse(lookupDraftType.EditValue.ToString()), Int32.Parse(lookupUnit.EditValue.ToString()), SessionHelper.member.ID, double.Parse(txtAmount.Text), txtDescp.Text, null, null, null, null, DateTime.Now, Int32.Parse(lookupState.EditValue.ToString()), null);
 
 
                 }
