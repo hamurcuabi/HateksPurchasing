@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
+using HateksPurchasing.Helper;
 
 namespace HateksPurchasing
 {
     public partial class HomeForm : RibbonForm
     {
 
+        
         public HomeForm()
         {
             InitializeComponent();
@@ -159,15 +161,42 @@ namespace HateksPurchasing
 
         private void HomeForm_Load(object sender, EventArgs e)
         {
-           
-            CreateMdiForm(new Drafts());
-            Login login = new Login();
-
-            if (login.ShowDialog() == DialogResult.OK) {
-               
+        
+            if (new Login().ShowDialog() == DialogResult.OK)
+            {
+                bar.Caption = SessionHelper.member.Name;
+                CreateMdiForm(new Drafts());
             }
-           
-            
+
+
+        }
+
+        private void ribbon_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void HomeForm_Shown(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void btnChart_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            bool isexist = false;
+
+            foreach (var form in this.xtraTabbedMdiManager1.MdiParent.MdiChildren)
+            {
+                if (form is DashBoard)
+                {
+                    form.BringToFront();
+                    isexist = true;
+                    break;
+
+                }
+            }
+            if (!isexist)
+                CreateMdiForm(new DashBoard());
         }
     }
 

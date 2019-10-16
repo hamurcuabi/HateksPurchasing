@@ -198,7 +198,6 @@
             // colColor
             // 
             this.colColor.Caption = "Renk Kodu";
-            this.colColor.ColumnEdit = this.repositoryItemColorPickEdit1;
             this.colColor.FieldName = "Color";
             this.colColor.MinWidth = 25;
             this.colColor.Name = "colColor";

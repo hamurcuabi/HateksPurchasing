@@ -19,7 +19,7 @@ namespace HateksPurchasing.Helper
                 case 4:
                     return System.Drawing.Color.FromArgb(arrColorFragments[0], arrColorFragments[1], arrColorFragments[2], arrColorFragments[3]);
                 default:
-                    return System.Drawing.Color.Transparent;
+                    return System.Drawing.Color.FromName(color);
             }
         }
     }

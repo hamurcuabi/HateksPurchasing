@@ -33,10 +33,11 @@
             this.mvvmContext1 = new DevExpress.Utils.MVVM.MVVMContext(this.components);
             this.txtUsername = new DevExpress.XtraEditors.TextEdit();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtPass = new DevExpress.XtraEditors.TextEdit();
             this.memberTableAdapter1 = new HateksPurchasing.HateksPurchasingDataSetTableAdapters.MemberTableAdapter();
             this.hateksPurchasingDataSet1 = new HateksPurchasing.HateksPurchasingDataSet();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUsername.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).BeginInit();
@@ -49,7 +50,7 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(30, 83);
+            this.txtUsername.Location = new System.Drawing.Point(30, 70);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.Properties.Appearance.Options.UseFont = true;
@@ -64,28 +65,16 @@
             this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton1.Appearance.Options.UseFont = true;
             this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
-            this.simpleButton1.Location = new System.Drawing.Point(30, 239);
+            this.simpleButton1.Location = new System.Drawing.Point(205, 239);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(297, 52);
+            this.simpleButton1.Size = new System.Drawing.Size(122, 52);
             this.simpleButton1.TabIndex = 6;
             this.simpleButton1.Text = "Giriş";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(60, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(244, 24);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Hateks Satın Alma Modülü";
-            // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(30, 145);
+            this.txtPass.Location = new System.Drawing.Point(30, 133);
             this.txtPass.Name = "txtPass";
             this.txtPass.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass.Properties.Appearance.Options.UseFont = true;
@@ -105,16 +94,44 @@
             this.hateksPurchasingDataSet1.DataSetName = "HateksPurchasingDataSet";
             this.hateksPurchasingDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton2.Appearance.Options.UseFont = true;
+            this.simpleButton2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
+            this.simpleButton2.Location = new System.Drawing.Point(30, 239);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(122, 52);
+            this.simpleButton2.TabIndex = 8;
+            this.simpleButton2.Text = "Çıkış";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            // 
+            // simpleButton3
+            // 
+            this.simpleButton3.Appearance.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton3.Appearance.Options.UseFont = true;
+            this.simpleButton3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.simpleButton3.Location = new System.Drawing.Point(0, 0);
+            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.Size = new System.Drawing.Size(357, 50);
+            this.simpleButton3.TabIndex = 9;
+            this.simpleButton3.Text = "Hateks Satın Alma";
+            // 
             // Login
             // 
+            this.Appearance.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.Appearance.ForeColor = System.Drawing.Color.White;
+            this.Appearance.Options.UseBackColor = true;
+            this.Appearance.Options.UseForeColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(357, 307);
+            this.Controls.Add(this.simpleButton3);
+            this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.simpleButton1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtPass);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -124,7 +141,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hateksPurchasingDataSet1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -132,9 +148,10 @@
         private DevExpress.Utils.MVVM.MVVMContext mvvmContext1;
         private DevExpress.XtraEditors.TextEdit txtUsername;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private System.Windows.Forms.Label label1;
         private DevExpress.XtraEditors.TextEdit txtPass;
         private HateksPurchasingDataSetTableAdapters.MemberTableAdapter memberTableAdapter1;
         private HateksPurchasingDataSet hateksPurchasingDataSet1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton simpleButton3;
     }
 }

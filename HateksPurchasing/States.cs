@@ -33,7 +33,13 @@ namespace HateksPurchasing
         {
 
             GridView view = sender as GridView;
-            if (view.FocusedRowHandle == e.RowHandle && !view.FocusedColumn.Equals(e.Column)) { e.Appearance.BackColor = Color.Orange; }
+          
+            if (e.Column.FieldName == "Color")
+            {
+                String color = view.GetRowCellValue(e.RowHandle, "Color").ToString();
+                e.Appearance.BackColor = ColorHelper.ToColor(color);
+
+            }
 
         }
 

@@ -8,6 +8,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using HateksPurchasing.Helper;
+using static HateksPurchasing.HateksPurchasingDataSet;
 
 namespace HateksPurchasing
 {
@@ -20,9 +22,9 @@ namespace HateksPurchasing
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
+          
             if (Validate())
             {
-
                 this.memberTableAdapter1.Fill(this.hateksPurchasingDataSet1.Member);
                 object dt = this.hateksPurchasingDataSet1.Member.SingleOrDefault(p => p.Name.ToLower() == txtUsername.Text.ToLower() && p.Password.ToLower() == txtPass.Text.ToLower());
 
@@ -31,7 +33,10 @@ namespace HateksPurchasing
                 {
                     XtraMessageBox.Show("Giriş Hatalı", "Hatalı", MessageBoxButtons.OK);
                 }
-                else {
+                else
+                {
+                    SessionHelper.member =(MemberRow) dt;
+                    DialogResult = DialogResult.OK;
                     Close();
                 }
 
@@ -52,6 +57,11 @@ namespace HateksPurchasing
                 return false;
             }
             return true;
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
