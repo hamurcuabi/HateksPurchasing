@@ -20,6 +20,7 @@ namespace HateksPurchasing
         public DashBoard()
         {
             InitializeComponent();
+            getTotalPriceByDraftTableAdapter1.Fill(hateksPurchasingDataSet1.GetTotalPriceByDraft);
             PrepareData();
         }
 

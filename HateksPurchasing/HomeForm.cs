@@ -164,7 +164,7 @@ namespace HateksPurchasing
 
             if (new Login().ShowDialog() == DialogResult.OK)
             {
-                bar.Caption = SessionHelper.member.Name;
+                bar.Caption = "Holgeldiniz " + SessionHelper.member.Name.ToUpper();
                 CreateMdiForm(new Drafts());
             }
 

@@ -83,5 +83,11 @@ namespace HateksPurchasing
         {
 
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            this.viewDraftTableAdapter.ClearBeforeFill = true;
+            this.viewDraftTableAdapter.Fill(this.hateksPurchasingDataSet.ViewDraft);
+        }
     }
 }

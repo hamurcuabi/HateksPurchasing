@@ -34,6 +34,7 @@
             DevExpress.XtraCharts.HatchFillOptions hatchFillOptions1 = new DevExpress.XtraCharts.HatchFillOptions();
             this.hateksPurchasingDataSet1 = new HateksPurchasing.HateksPurchasingDataSet();
             this.chart = new DevExpress.XtraCharts.ChartControl();
+            this.getTotalPriceByDraftTableAdapter1 = new HateksPurchasing.HateksPurchasingDataSetTableAdapters.GetTotalPriceByDraftTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.hateksPurchasingDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
@@ -49,6 +50,7 @@
             // chart
             // 
             this.chart.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnLoad;
+            this.chart.DataAdapter = this.getTotalPriceByDraftTableAdapter1;
             xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
             xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
             this.chart.Diagram = xyDiagram1;
@@ -68,6 +70,10 @@
         series1};
             this.chart.Size = new System.Drawing.Size(790, 620);
             this.chart.TabIndex = 0;
+            // 
+            // getTotalPriceByDraftTableAdapter1
+            // 
+            this.getTotalPriceByDraftTableAdapter1.ClearBeforeFill = true;
             // 
             // DashBoard
             // 
@@ -90,5 +96,6 @@
         #endregion
         private HateksPurchasingDataSet hateksPurchasingDataSet1;
         private DevExpress.XtraCharts.ChartControl chart;
+        private HateksPurchasingDataSetTableAdapters.GetTotalPriceByDraftTableAdapter getTotalPriceByDraftTableAdapter1;
     }
 }

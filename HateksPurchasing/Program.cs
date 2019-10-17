@@ -17,7 +17,7 @@ namespace HateksPurchasing
         [STAThread]
         static void Main()
         {
-            WindowsFormsSettings.LoadApplicationSettings();
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Thread.CurrentThread.CurrentCulture = new CultureInfo("tr-TR");
