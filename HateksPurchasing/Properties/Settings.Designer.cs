@@ -26,11 +26,22 @@ namespace HateksPurchasing.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=EMREHAMURCU\\SQLEXPRESS;Initial Catalog=HateksPurchasing;Integrated Se" +
-            "curity=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=HATEKSMRPTEST;initial catalog=HateksPurchasing;user id=sa;password=Em" +
+            "rhmrc.95;Integrated Security=True")]
         public string HateksPurchasingConnectionString {
             get {
                 return ((string)(this["HateksPurchasingConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=HATEKSMRPTEST;Initial Catalog=HateksPurchasing;User ID=sa;Password=Em" +
+            "rhmrc.95")]
+        public string HateksPurchasingConnectionString1 {
+            get {
+                return ((string)(this["HateksPurchasingConnectionString1"]));
             }
         }
     }

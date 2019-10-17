@@ -25,16 +25,14 @@ namespace HateksPurchasing
 
         private void PrepareData()
         {
-            SqlConnection con = SqlHelper.OpenConnection();
-            SqlCommand cmd = SqlHelper.GetSqlCommand("select * from GetTotalPriceByDraft()", con);
-            SqlDataReader dr = SqlHelper.GetSqlDataReader(cmd);
-            while (dr.Read())
+            DataTable data = hateksPurchasingDataSet1.GetTotalPriceByDraft;
+            foreach (DataRow dr in data.Rows)
             {
                 chart.Series["Departmanlar"].Points.Add(new SeriesPoint(dr["DraftTypeName"], dr["Total"]));
                 //  PrepareCompanies(int.Parse(dr["DraftTypeId"].ToString()));
             }
 
-            SqlHelper.CloseConnection(con);
+            
 
             //Companies
 

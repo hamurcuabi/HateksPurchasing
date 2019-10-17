@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.XtraEditors;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -16,10 +17,12 @@ namespace HateksPurchasing
         [STAThread]
         static void Main()
         {
+            WindowsFormsSettings.LoadApplicationSettings();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Thread.CurrentThread.CurrentCulture = new CultureInfo("tr-TR");
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("tr-TR");
+
             Application.Run(new HomeForm());
         }
     }

@@ -2,9 +2,10 @@
 <xs:schema id="HateksPurchasingDataSet" targetNamespace="http://tempuri.org/HateksPurchasingDataSet.xsd" xmlns:mstns="http://tempuri.org/HateksPurchasingDataSet.xsd" xmlns="http://tempuri.org/HateksPurchasingDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="HateksPurchasingConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="HateksPurchasingConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.HateksPurchasing.Properties.Settings.GlobalReference.Default.HateksPurchasingConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="HateksPurchasingConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="HateksPurchasingConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.HateksPurchasing.Properties.Settings.GlobalReference.Default.HateksPurchasingConnectionString1" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CurrencyTableAdapter" GeneratorDataComponentClassName="CurrencyTableAdapter" Name="Currency" UserDataComponentName="CurrencyTableAdapter">
@@ -652,15 +653,65 @@ SELECT ID, Name, Date FROM Unit WHERE (ID = @ID)</CommandText>
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GetTotalPriceByCompanyTableAdapter" GeneratorDataComponentClassName="GetTotalPriceByCompanyTableAdapter" Name="GetTotalPriceByCompany" UserDataComponentName="GetTotalPriceByCompanyTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="HateksPurchasingConnectionString1 (Settings)" DbObjectName="HateksPurchasing.dbo.GetTotalPriceByCompany" DbObjectType="Function" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT CompanyId, CompanyName, DraftTypeId, DraftTypeName, TotalPrice FROM dbo.GetTotalPriceByCompany()</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CompanyId" DataSetColumn="CompanyId" />
+              <Mapping SourceColumn="CompanyName" DataSetColumn="CompanyName" />
+              <Mapping SourceColumn="DraftTypeId" DataSetColumn="DraftTypeId" />
+              <Mapping SourceColumn="DraftTypeName" DataSetColumn="DraftTypeName" />
+              <Mapping SourceColumn="TotalPrice" DataSetColumn="TotalPrice" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GetTotalPriceByDraftTableAdapter" GeneratorDataComponentClassName="GetTotalPriceByDraftTableAdapter" Name="GetTotalPriceByDraft" UserDataComponentName="GetTotalPriceByDraftTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="HateksPurchasingConnectionString1 (Settings)" DbObjectName="HateksPurchasing.dbo.GetTotalPriceByDraft" DbObjectType="Function" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Total, DraftTypeId, DraftTypeName FROM dbo.GetTotalPriceByDraft()</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Total" DataSetColumn="Total" />
+              <Mapping SourceColumn="DraftTypeId" DataSetColumn="DraftTypeId" />
+              <Mapping SourceColumn="DraftTypeName" DataSetColumn="DraftTypeName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
-        <Sources />
+        <Sources>
+          <DbSource ConnectionRef="HateksPurchasingConnectionString1 (Settings)" DbObjectName="HateksPurchasing.dbo.GetTotalPriceViewDraftById" DbObjectType="Function" GenerateShortCommands="true" GeneratorSourceName="GetTotalPriceViewDraftById" MethodsParameterType="CLR" Modifier="Public" Name="GetTotalPriceViewDraftById" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="GetTotalPriceViewDraftById">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.GetTotalPriceViewDraftById</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="float" DbType="Double" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="53" ProviderType="Float" Scale="0" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+        </Sources>
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
   <xs:element name="HateksPurchasingDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="HateksPurchasingDataSet" msprop:Generator_UserDSName="HateksPurchasingDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Currency" msprop:Generator_TableClassName="CurrencyDataTable" msprop:Generator_TableVarName="tableCurrency" msprop:Generator_RowChangedName="CurrencyRowChanged" msprop:Generator_TablePropName="Currency" msprop:Generator_RowDeletingName="CurrencyRowDeleting" msprop:Generator_RowChangingName="CurrencyRowChanging" msprop:Generator_RowEvHandlerName="CurrencyRowChangeEventHandler" msprop:Generator_RowDeletedName="CurrencyRowDeleted" msprop:Generator_RowClassName="CurrencyRow" msprop:Generator_UserTableName="Currency" msprop:Generator_RowEvArgName="CurrencyRowChangeEvent">
+        <xs:element name="Currency" msprop:Generator_TableClassName="CurrencyDataTable" msprop:Generator_TableVarName="tableCurrency" msprop:Generator_TablePropName="Currency" msprop:Generator_RowDeletingName="CurrencyRowDeleting" msprop:Generator_RowChangingName="CurrencyRowChanging" msprop:Generator_RowEvHandlerName="CurrencyRowChangeEventHandler" msprop:Generator_RowDeletedName="CurrencyRowDeleted" msprop:Generator_UserTableName="Currency" msprop:Generator_RowChangedName="CurrencyRowChanged" msprop:Generator_RowEvArgName="CurrencyRowChangeEvent" msprop:Generator_RowClassName="CurrencyRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -682,7 +733,7 @@ SELECT ID, Name, Date FROM Unit WHERE (ID = @ID)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Draft" msprop:Generator_TableClassName="DraftDataTable" msprop:Generator_TableVarName="tableDraft" msprop:Generator_RowChangedName="DraftRowChanged" msprop:Generator_TablePropName="Draft" msprop:Generator_RowDeletingName="DraftRowDeleting" msprop:Generator_RowChangingName="DraftRowChanging" msprop:Generator_RowEvHandlerName="DraftRowChangeEventHandler" msprop:Generator_RowDeletedName="DraftRowDeleted" msprop:Generator_RowClassName="DraftRow" msprop:Generator_UserTableName="Draft" msprop:Generator_RowEvArgName="DraftRowChangeEvent">
+        <xs:element name="Draft" msprop:Generator_TableClassName="DraftDataTable" msprop:Generator_TableVarName="tableDraft" msprop:Generator_TablePropName="Draft" msprop:Generator_RowDeletingName="DraftRowDeleting" msprop:Generator_RowChangingName="DraftRowChanging" msprop:Generator_RowEvHandlerName="DraftRowChangeEventHandler" msprop:Generator_RowDeletedName="DraftRowDeleted" msprop:Generator_UserTableName="Draft" msprop:Generator_RowChangedName="DraftRowChanged" msprop:Generator_RowEvArgName="DraftRowChangeEvent" msprop:Generator_RowClassName="DraftRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -714,7 +765,7 @@ SELECT ID, Name, Date FROM Unit WHERE (ID = @ID)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DraftType" msprop:Generator_TableClassName="DraftTypeDataTable" msprop:Generator_TableVarName="tableDraftType" msprop:Generator_RowChangedName="DraftTypeRowChanged" msprop:Generator_TablePropName="DraftType" msprop:Generator_RowDeletingName="DraftTypeRowDeleting" msprop:Generator_RowChangingName="DraftTypeRowChanging" msprop:Generator_RowEvHandlerName="DraftTypeRowChangeEventHandler" msprop:Generator_RowDeletedName="DraftTypeRowDeleted" msprop:Generator_RowClassName="DraftTypeRow" msprop:Generator_UserTableName="DraftType" msprop:Generator_RowEvArgName="DraftTypeRowChangeEvent">
+        <xs:element name="DraftType" msprop:Generator_TableClassName="DraftTypeDataTable" msprop:Generator_TableVarName="tableDraftType" msprop:Generator_TablePropName="DraftType" msprop:Generator_RowDeletingName="DraftTypeRowDeleting" msprop:Generator_RowChangingName="DraftTypeRowChanging" msprop:Generator_RowEvHandlerName="DraftTypeRowChangeEventHandler" msprop:Generator_RowDeletedName="DraftTypeRowDeleted" msprop:Generator_UserTableName="DraftType" msprop:Generator_RowChangedName="DraftTypeRowChanged" msprop:Generator_RowEvArgName="DraftTypeRowChangeEvent" msprop:Generator_RowClassName="DraftTypeRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -729,7 +780,7 @@ SELECT ID, Name, Date FROM Unit WHERE (ID = @ID)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Member" msprop:Generator_TableClassName="MemberDataTable" msprop:Generator_TableVarName="tableMember" msprop:Generator_RowChangedName="MemberRowChanged" msprop:Generator_TablePropName="Member" msprop:Generator_RowDeletingName="MemberRowDeleting" msprop:Generator_RowChangingName="MemberRowChanging" msprop:Generator_RowEvHandlerName="MemberRowChangeEventHandler" msprop:Generator_RowDeletedName="MemberRowDeleted" msprop:Generator_RowClassName="MemberRow" msprop:Generator_UserTableName="Member" msprop:Generator_RowEvArgName="MemberRowChangeEvent">
+        <xs:element name="Member" msprop:Generator_TableClassName="MemberDataTable" msprop:Generator_TableVarName="tableMember" msprop:Generator_TablePropName="Member" msprop:Generator_RowDeletingName="MemberRowDeleting" msprop:Generator_RowChangingName="MemberRowChanging" msprop:Generator_RowEvHandlerName="MemberRowChangeEventHandler" msprop:Generator_RowDeletedName="MemberRowDeleted" msprop:Generator_UserTableName="Member" msprop:Generator_RowChangedName="MemberRowChanged" msprop:Generator_RowEvArgName="MemberRowChangeEvent" msprop:Generator_RowClassName="MemberRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -766,7 +817,7 @@ SELECT ID, Name, Date FROM Unit WHERE (ID = @ID)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Offering" msprop:Generator_TableClassName="OfferingDataTable" msprop:Generator_TableVarName="tableOffering" msprop:Generator_RowChangedName="OfferingRowChanged" msprop:Generator_TablePropName="Offering" msprop:Generator_RowDeletingName="OfferingRowDeleting" msprop:Generator_RowChangingName="OfferingRowChanging" msprop:Generator_RowEvHandlerName="OfferingRowChangeEventHandler" msprop:Generator_RowDeletedName="OfferingRowDeleted" msprop:Generator_RowClassName="OfferingRow" msprop:Generator_UserTableName="Offering" msprop:Generator_RowEvArgName="OfferingRowChangeEvent">
+        <xs:element name="Offering" msprop:Generator_TableClassName="OfferingDataTable" msprop:Generator_TableVarName="tableOffering" msprop:Generator_TablePropName="Offering" msprop:Generator_RowDeletingName="OfferingRowDeleting" msprop:Generator_RowChangingName="OfferingRowChanging" msprop:Generator_RowEvHandlerName="OfferingRowChangeEventHandler" msprop:Generator_RowDeletedName="OfferingRowDeleted" msprop:Generator_UserTableName="Offering" msprop:Generator_RowChangedName="OfferingRowChanged" msprop:Generator_RowEvArgName="OfferingRowChangeEvent" msprop:Generator_RowClassName="OfferingRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -786,7 +837,7 @@ SELECT ID, Name, Date FROM Unit WHERE (ID = @ID)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="OfferingCompany" msprop:Generator_TableClassName="OfferingCompanyDataTable" msprop:Generator_TableVarName="tableOfferingCompany" msprop:Generator_RowChangedName="OfferingCompanyRowChanged" msprop:Generator_TablePropName="OfferingCompany" msprop:Generator_RowDeletingName="OfferingCompanyRowDeleting" msprop:Generator_RowChangingName="OfferingCompanyRowChanging" msprop:Generator_RowEvHandlerName="OfferingCompanyRowChangeEventHandler" msprop:Generator_RowDeletedName="OfferingCompanyRowDeleted" msprop:Generator_RowClassName="OfferingCompanyRow" msprop:Generator_UserTableName="OfferingCompany" msprop:Generator_RowEvArgName="OfferingCompanyRowChangeEvent">
+        <xs:element name="OfferingCompany" msprop:Generator_TableClassName="OfferingCompanyDataTable" msprop:Generator_TableVarName="tableOfferingCompany" msprop:Generator_TablePropName="OfferingCompany" msprop:Generator_RowDeletingName="OfferingCompanyRowDeleting" msprop:Generator_RowChangingName="OfferingCompanyRowChanging" msprop:Generator_RowEvHandlerName="OfferingCompanyRowChangeEventHandler" msprop:Generator_RowDeletedName="OfferingCompanyRowDeleted" msprop:Generator_UserTableName="OfferingCompany" msprop:Generator_RowChangedName="OfferingCompanyRowChanged" msprop:Generator_RowEvArgName="OfferingCompanyRowChangeEvent" msprop:Generator_RowClassName="OfferingCompanyRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -815,7 +866,7 @@ SELECT ID, Name, Date FROM Unit WHERE (ID = @ID)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="State" msprop:Generator_TableClassName="StateDataTable" msprop:Generator_TableVarName="tableState" msprop:Generator_RowChangedName="StateRowChanged" msprop:Generator_TablePropName="State" msprop:Generator_RowDeletingName="StateRowDeleting" msprop:Generator_RowChangingName="StateRowChanging" msprop:Generator_RowEvHandlerName="StateRowChangeEventHandler" msprop:Generator_RowDeletedName="StateRowDeleted" msprop:Generator_RowClassName="StateRow" msprop:Generator_UserTableName="State" msprop:Generator_RowEvArgName="StateRowChangeEvent">
+        <xs:element name="State" msprop:Generator_TableClassName="StateDataTable" msprop:Generator_TableVarName="tableState" msprop:Generator_TablePropName="State" msprop:Generator_RowDeletingName="StateRowDeleting" msprop:Generator_RowChangingName="StateRowChanging" msprop:Generator_RowEvHandlerName="StateRowChangeEventHandler" msprop:Generator_RowDeletedName="StateRowDeleted" msprop:Generator_UserTableName="State" msprop:Generator_RowChangedName="StateRowChanged" msprop:Generator_RowEvArgName="StateRowChangeEvent" msprop:Generator_RowClassName="StateRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -843,7 +894,7 @@ SELECT ID, Name, Date FROM Unit WHERE (ID = @ID)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Unit" msprop:Generator_TableClassName="UnitDataTable" msprop:Generator_TableVarName="tableUnit" msprop:Generator_RowChangedName="UnitRowChanged" msprop:Generator_TablePropName="Unit" msprop:Generator_RowDeletingName="UnitRowDeleting" msprop:Generator_RowChangingName="UnitRowChanging" msprop:Generator_RowEvHandlerName="UnitRowChangeEventHandler" msprop:Generator_RowDeletedName="UnitRowDeleted" msprop:Generator_RowClassName="UnitRow" msprop:Generator_UserTableName="Unit" msprop:Generator_RowEvArgName="UnitRowChangeEvent">
+        <xs:element name="Unit" msprop:Generator_TableClassName="UnitDataTable" msprop:Generator_TableVarName="tableUnit" msprop:Generator_TablePropName="Unit" msprop:Generator_RowDeletingName="UnitRowDeleting" msprop:Generator_RowChangingName="UnitRowChanging" msprop:Generator_RowEvHandlerName="UnitRowChangeEventHandler" msprop:Generator_RowDeletedName="UnitRowDeleted" msprop:Generator_UserTableName="Unit" msprop:Generator_RowChangedName="UnitRowChanged" msprop:Generator_RowEvArgName="UnitRowChangeEvent" msprop:Generator_RowClassName="UnitRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -858,7 +909,7 @@ SELECT ID, Name, Date FROM Unit WHERE (ID = @ID)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ViewDraft" msprop:Generator_TableClassName="ViewDraftDataTable" msprop:Generator_TableVarName="tableViewDraft" msprop:Generator_RowChangedName="ViewDraftRowChanged" msprop:Generator_TablePropName="ViewDraft" msprop:Generator_RowDeletingName="ViewDraftRowDeleting" msprop:Generator_RowChangingName="ViewDraftRowChanging" msprop:Generator_RowEvHandlerName="ViewDraftRowChangeEventHandler" msprop:Generator_RowDeletedName="ViewDraftRowDeleted" msprop:Generator_RowClassName="ViewDraftRow" msprop:Generator_UserTableName="ViewDraft" msprop:Generator_RowEvArgName="ViewDraftRowChangeEvent">
+        <xs:element name="ViewDraft" msprop:Generator_TableClassName="ViewDraftDataTable" msprop:Generator_TableVarName="tableViewDraft" msprop:Generator_TablePropName="ViewDraft" msprop:Generator_RowDeletingName="ViewDraftRowDeleting" msprop:Generator_RowChangingName="ViewDraftRowChanging" msprop:Generator_RowEvHandlerName="ViewDraftRowChangeEventHandler" msprop:Generator_RowDeletedName="ViewDraftRowDeleted" msprop:Generator_UserTableName="ViewDraft" msprop:Generator_RowChangedName="ViewDraftRowChanged" msprop:Generator_RowEvArgName="ViewDraftRowChangeEvent" msprop:Generator_RowClassName="ViewDraftRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -984,7 +1035,7 @@ SELECT ID, Name, Date FROM Unit WHERE (ID = @ID)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ViewOffering" msprop:Generator_TableClassName="ViewOfferingDataTable" msprop:Generator_TableVarName="tableViewOffering" msprop:Generator_RowChangedName="ViewOfferingRowChanged" msprop:Generator_TablePropName="ViewOffering" msprop:Generator_RowDeletingName="ViewOfferingRowDeleting" msprop:Generator_RowChangingName="ViewOfferingRowChanging" msprop:Generator_RowEvHandlerName="ViewOfferingRowChangeEventHandler" msprop:Generator_RowDeletedName="ViewOfferingRowDeleted" msprop:Generator_RowClassName="ViewOfferingRow" msprop:Generator_UserTableName="ViewOffering" msprop:Generator_RowEvArgName="ViewOfferingRowChangeEvent">
+        <xs:element name="ViewOffering" msprop:Generator_TableClassName="ViewOfferingDataTable" msprop:Generator_TableVarName="tableViewOffering" msprop:Generator_TablePropName="ViewOffering" msprop:Generator_RowDeletingName="ViewOfferingRowDeleting" msprop:Generator_RowChangingName="ViewOfferingRowChanging" msprop:Generator_RowEvHandlerName="ViewOfferingRowChangeEventHandler" msprop:Generator_RowDeletedName="ViewOfferingRowDeleted" msprop:Generator_UserTableName="ViewOffering" msprop:Generator_RowChangedName="ViewOfferingRowChanged" msprop:Generator_RowEvArgName="ViewOfferingRowChangeEvent" msprop:Generator_RowClassName="ViewOfferingRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -1033,6 +1084,44 @@ SELECT ID, Name, Date FROM Unit WHERE (ID = @ID)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="GetTotalPriceByCompany" msprop:Generator_TableClassName="GetTotalPriceByCompanyDataTable" msprop:Generator_TableVarName="tableGetTotalPriceByCompany" msprop:Generator_TablePropName="GetTotalPriceByCompany" msprop:Generator_RowDeletingName="GetTotalPriceByCompanyRowDeleting" msprop:Generator_RowChangingName="GetTotalPriceByCompanyRowChanging" msprop:Generator_RowEvHandlerName="GetTotalPriceByCompanyRowChangeEventHandler" msprop:Generator_RowDeletedName="GetTotalPriceByCompanyRowDeleted" msprop:Generator_UserTableName="GetTotalPriceByCompany" msprop:Generator_RowChangedName="GetTotalPriceByCompanyRowChanged" msprop:Generator_RowEvArgName="GetTotalPriceByCompanyRowChangeEvent" msprop:Generator_RowClassName="GetTotalPriceByCompanyRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CompanyId" msprop:Generator_ColumnVarNameInTable="columnCompanyId" msprop:Generator_ColumnPropNameInRow="CompanyId" msprop:Generator_ColumnPropNameInTable="CompanyIdColumn" msprop:Generator_UserColumnName="CompanyId" type="xs:int" minOccurs="0" />
+              <xs:element name="CompanyName" msprop:Generator_ColumnVarNameInTable="columnCompanyName" msprop:Generator_ColumnPropNameInRow="CompanyName" msprop:Generator_ColumnPropNameInTable="CompanyNameColumn" msprop:Generator_UserColumnName="CompanyName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DraftTypeId" msprop:Generator_ColumnVarNameInTable="columnDraftTypeId" msprop:Generator_ColumnPropNameInRow="DraftTypeId" msprop:Generator_ColumnPropNameInTable="DraftTypeIdColumn" msprop:Generator_UserColumnName="DraftTypeId" type="xs:int" />
+              <xs:element name="DraftTypeName" msprop:Generator_ColumnVarNameInTable="columnDraftTypeName" msprop:Generator_ColumnPropNameInRow="DraftTypeName" msprop:Generator_ColumnPropNameInTable="DraftTypeNameColumn" msprop:Generator_UserColumnName="DraftTypeName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TotalPrice" msprop:Generator_ColumnVarNameInTable="columnTotalPrice" msprop:Generator_ColumnPropNameInRow="TotalPrice" msprop:Generator_ColumnPropNameInTable="TotalPriceColumn" msprop:Generator_UserColumnName="TotalPrice" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GetTotalPriceByDraft" msprop:Generator_TableClassName="GetTotalPriceByDraftDataTable" msprop:Generator_TableVarName="tableGetTotalPriceByDraft" msprop:Generator_TablePropName="GetTotalPriceByDraft" msprop:Generator_RowDeletingName="GetTotalPriceByDraftRowDeleting" msprop:Generator_RowChangingName="GetTotalPriceByDraftRowChanging" msprop:Generator_RowEvHandlerName="GetTotalPriceByDraftRowChangeEventHandler" msprop:Generator_RowDeletedName="GetTotalPriceByDraftRowDeleted" msprop:Generator_UserTableName="GetTotalPriceByDraft" msprop:Generator_RowChangedName="GetTotalPriceByDraftRowChanged" msprop:Generator_RowEvArgName="GetTotalPriceByDraftRowChangeEvent" msprop:Generator_RowClassName="GetTotalPriceByDraftRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Total" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total" type="xs:double" minOccurs="0" />
+              <xs:element name="DraftTypeId" msprop:Generator_ColumnVarNameInTable="columnDraftTypeId" msprop:Generator_ColumnPropNameInRow="DraftTypeId" msprop:Generator_ColumnPropNameInTable="DraftTypeIdColumn" msprop:Generator_UserColumnName="DraftTypeId" type="xs:int" />
+              <xs:element name="DraftTypeName" msprop:Generator_ColumnVarNameInTable="columnDraftTypeName" msprop:Generator_ColumnPropNameInRow="DraftTypeName" msprop:Generator_ColumnPropNameInTable="DraftTypeNameColumn" msprop:Generator_UserColumnName="DraftTypeName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -1067,16 +1156,20 @@ SELECT ID, Name, Date FROM Unit WHERE (ID = @ID)</CommandText>
       <xs:selector xpath=".//mstns:Unit" />
       <xs:field xpath="mstns:ID" />
     </xs:unique>
+    <xs:unique name="GetTotalPriceByCompany_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:GetTotalPriceByCompany" />
+      <xs:field xpath="mstns:CompanyId" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_Draft_DraftType" msdata:parent="DraftType" msdata:child="Draft" msdata:parentkey="ID" msdata:childkey="DraftTypeId" msprop:Generator_UserChildTable="Draft" msprop:Generator_ChildPropName="GetDraftRows" msprop:Generator_UserRelationName="FK_Draft_DraftType" msprop:Generator_ParentPropName="DraftTypeRow" msprop:Generator_RelationVarName="relationFK_Draft_DraftType" msprop:Generator_UserParentTable="DraftType" />
-      <msdata:Relationship name="FK_Draft_Member" msdata:parent="Member" msdata:child="Draft" msdata:parentkey="ID" msdata:childkey="MemberId" msprop:Generator_UserChildTable="Draft" msprop:Generator_ChildPropName="GetDraftRows" msprop:Generator_UserRelationName="FK_Draft_Member" msprop:Generator_ParentPropName="MemberRow" msprop:Generator_RelationVarName="relationFK_Draft_Member" msprop:Generator_UserParentTable="Member" />
-      <msdata:Relationship name="FK_Draft_Offering" msdata:parent="Offering" msdata:child="Draft" msdata:parentkey="ID" msdata:childkey="SelectedOffering" msprop:Generator_UserChildTable="Draft" msprop:Generator_ChildPropName="GetDraftRows" msprop:Generator_UserRelationName="FK_Draft_Offering" msprop:Generator_ParentPropName="OfferingRow" msprop:Generator_RelationVarName="relationFK_Draft_Offering" msprop:Generator_UserParentTable="Offering" />
-      <msdata:Relationship name="FK_Offering_Currency" msdata:parent="Currency" msdata:child="Offering" msdata:parentkey="ID" msdata:childkey="CurrencyId" msprop:Generator_UserChildTable="Offering" msprop:Generator_ChildPropName="GetOfferingRows" msprop:Generator_UserRelationName="FK_Offering_Currency" msprop:Generator_RelationVarName="relationFK_Offering_Currency" msprop:Generator_UserParentTable="Currency" msprop:Generator_ParentPropName="CurrencyRow" />
-      <msdata:Relationship name="FK_Offering_OfferingCompany" msdata:parent="OfferingCompany" msdata:child="Offering" msdata:parentkey="ID" msdata:childkey="OfferingCompanyId" msprop:Generator_UserChildTable="Offering" msprop:Generator_ChildPropName="GetOfferingRows" msprop:Generator_UserRelationName="FK_Offering_OfferingCompany" msprop:Generator_ParentPropName="OfferingCompanyRow" msprop:Generator_RelationVarName="relationFK_Offering_OfferingCompany" msprop:Generator_UserParentTable="OfferingCompany" />
-      <msdata:Relationship name="FK_Draft_State" msdata:parent="State" msdata:child="Draft" msdata:parentkey="ID" msdata:childkey="StateId" msprop:Generator_UserChildTable="Draft" msprop:Generator_ChildPropName="GetDraftRows" msprop:Generator_UserRelationName="FK_Draft_State" msprop:Generator_ParentPropName="StateRow" msprop:Generator_RelationVarName="relationFK_Draft_State" msprop:Generator_UserParentTable="State" />
-      <msdata:Relationship name="FK_Draft_Unit" msdata:parent="Unit" msdata:child="Draft" msdata:parentkey="ID" msdata:childkey="UnitId" msprop:Generator_UserChildTable="Draft" msprop:Generator_ChildPropName="GetDraftRows" msprop:Generator_UserRelationName="FK_Draft_Unit" msprop:Generator_ParentPropName="UnitRow" msprop:Generator_RelationVarName="relationFK_Draft_Unit" msprop:Generator_UserParentTable="Unit" />
+      <msdata:Relationship name="FK_Draft_DraftType" msdata:parent="DraftType" msdata:child="Draft" msdata:parentkey="ID" msdata:childkey="DraftTypeId" msprop:Generator_UserChildTable="Draft" msprop:Generator_ChildPropName="GetDraftRows" msprop:Generator_UserRelationName="FK_Draft_DraftType" msprop:Generator_RelationVarName="relationFK_Draft_DraftType" msprop:Generator_UserParentTable="DraftType" msprop:Generator_ParentPropName="DraftTypeRow" />
+      <msdata:Relationship name="FK_Draft_Member" msdata:parent="Member" msdata:child="Draft" msdata:parentkey="ID" msdata:childkey="MemberId" msprop:Generator_UserChildTable="Draft" msprop:Generator_ChildPropName="GetDraftRows" msprop:Generator_UserRelationName="FK_Draft_Member" msprop:Generator_RelationVarName="relationFK_Draft_Member" msprop:Generator_UserParentTable="Member" msprop:Generator_ParentPropName="MemberRow" />
+      <msdata:Relationship name="FK_Draft_Offering" msdata:parent="Offering" msdata:child="Draft" msdata:parentkey="ID" msdata:childkey="SelectedOffering" msprop:Generator_UserChildTable="Draft" msprop:Generator_ChildPropName="GetDraftRows" msprop:Generator_UserRelationName="FK_Draft_Offering" msprop:Generator_RelationVarName="relationFK_Draft_Offering" msprop:Generator_UserParentTable="Offering" msprop:Generator_ParentPropName="OfferingRow" />
+      <msdata:Relationship name="FK_Offering_Currency" msdata:parent="Currency" msdata:child="Offering" msdata:parentkey="ID" msdata:childkey="CurrencyId" msprop:Generator_UserChildTable="Offering" msprop:Generator_ChildPropName="GetOfferingRows" msprop:Generator_UserRelationName="FK_Offering_Currency" msprop:Generator_ParentPropName="CurrencyRow" msprop:Generator_RelationVarName="relationFK_Offering_Currency" msprop:Generator_UserParentTable="Currency" />
+      <msdata:Relationship name="FK_Offering_OfferingCompany" msdata:parent="OfferingCompany" msdata:child="Offering" msdata:parentkey="ID" msdata:childkey="OfferingCompanyId" msprop:Generator_UserChildTable="Offering" msprop:Generator_ChildPropName="GetOfferingRows" msprop:Generator_UserRelationName="FK_Offering_OfferingCompany" msprop:Generator_RelationVarName="relationFK_Offering_OfferingCompany" msprop:Generator_UserParentTable="OfferingCompany" msprop:Generator_ParentPropName="OfferingCompanyRow" />
+      <msdata:Relationship name="FK_Draft_State" msdata:parent="State" msdata:child="Draft" msdata:parentkey="ID" msdata:childkey="StateId" msprop:Generator_UserChildTable="Draft" msprop:Generator_ChildPropName="GetDraftRows" msprop:Generator_UserRelationName="FK_Draft_State" msprop:Generator_RelationVarName="relationFK_Draft_State" msprop:Generator_UserParentTable="State" msprop:Generator_ParentPropName="StateRow" />
+      <msdata:Relationship name="FK_Draft_Unit" msdata:parent="Unit" msdata:child="Draft" msdata:parentkey="ID" msdata:childkey="UnitId" msprop:Generator_UserChildTable="Draft" msprop:Generator_ChildPropName="GetDraftRows" msprop:Generator_UserRelationName="FK_Draft_Unit" msprop:Generator_RelationVarName="relationFK_Draft_Unit" msprop:Generator_UserParentTable="Unit" msprop:Generator_ParentPropName="UnitRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

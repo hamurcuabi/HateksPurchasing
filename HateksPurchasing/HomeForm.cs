@@ -16,7 +16,7 @@ namespace HateksPurchasing
     public partial class HomeForm : RibbonForm
     {
 
-        
+
         public HomeForm()
         {
             InitializeComponent();
@@ -161,7 +161,7 @@ namespace HateksPurchasing
 
         private void HomeForm_Load(object sender, EventArgs e)
         {
-        
+
             if (new Login().ShowDialog() == DialogResult.OK)
             {
                 bar.Caption = SessionHelper.member.Name;
