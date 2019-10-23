@@ -22,7 +22,7 @@ namespace HateksPurchasing
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-          
+            //validate
             if (Validate())
             {
                 this.memberTableAdapter1.Fill(this.hateksPurchasingDataSet1.Member);
