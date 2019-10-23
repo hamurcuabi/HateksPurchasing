@@ -198,6 +198,24 @@ namespace HateksPurchasing
             if (!isexist)
                 CreateMdiForm(new DashBoard());
         }
+
+        private void btnAddMember_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            bool isexist = false;
+
+            foreach (var form in this.xtraTabbedMdiManager1.MdiParent.MdiChildren)
+            {
+                if (form is Members)
+                {
+                    form.BringToFront();
+                    isexist = true;
+                    break;
+
+                }
+            }
+            if (!isexist)
+                CreateMdiForm(new Members());
+        }
     }
 
 

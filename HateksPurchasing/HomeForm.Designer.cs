@@ -40,17 +40,19 @@
             this.btnOfferings = new DevExpress.XtraBars.BarButtonItem();
             this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             this.bar = new DevExpress.XtraBars.BarStaticItem();
+            this.btnChart = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.mvvmContext1 = new DevExpress.Utils.MVVM.MVVMContext(this.components);
-            this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.btnChart = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.btnAddMember = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext1)).BeginInit();
@@ -70,9 +72,10 @@
             this.btnOfferings,
             this.skinRibbonGalleryBarItem1,
             this.bar,
-            this.btnChart});
+            this.btnChart,
+            this.btnAddMember});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 12;
+            this.ribbon.MaxItemId = 13;
             this.ribbon.Name = "ribbon";
             this.ribbon.PageHeaderItemLinks.Add(this.bar);
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -149,6 +152,14 @@
             this.bar.Id = 10;
             this.bar.Name = "bar";
             // 
+            // btnChart
+            // 
+            this.btnChart.Caption = "Departman Harcamaları";
+            this.btnChart.Id = 11;
+            this.btnChart.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnChart.ImageOptions.SvgImage")));
+            this.btnChart.Name = "btnChart";
+            this.btnChart.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnChart_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -157,7 +168,8 @@
             this.ribbonPageGroup3,
             this.ribbonPageGroup2,
             this.ribbonPageGroup4,
-            this.ribbonPageGroup6});
+            this.ribbonPageGroup6,
+            this.ribbonPageGroup7});
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "Anasayfa";
             // 
@@ -194,6 +206,12 @@
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.Text = "Tema";
             // 
+            // ribbonPageGroup6
+            // 
+            this.ribbonPageGroup6.ItemLinks.Add(this.btnChart);
+            this.ribbonPageGroup6.Name = "ribbonPageGroup6";
+            this.ribbonPageGroup6.Text = "Tablolar";
+            // 
             // ribbonStatusBar
             // 
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 511);
@@ -209,19 +227,19 @@
             // 
             this.mvvmContext1.ContainerControl = this;
             // 
-            // ribbonPageGroup6
+            // ribbonPageGroup7
             // 
-            this.ribbonPageGroup6.ItemLinks.Add(this.btnChart);
-            this.ribbonPageGroup6.Name = "ribbonPageGroup6";
-            this.ribbonPageGroup6.Text = "Tablolar";
+            this.ribbonPageGroup7.ItemLinks.Add(this.btnAddMember);
+            this.ribbonPageGroup7.Name = "ribbonPageGroup7";
+            this.ribbonPageGroup7.Text = "Kullanıcı Ekle";
             // 
-            // btnChart
+            // btnAddMember
             // 
-            this.btnChart.Caption = "Departman Harcamaları";
-            this.btnChart.Id = 11;
-            this.btnChart.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem1.ImageOptions.SvgImage")));
-            this.btnChart.Name = "btnChart";
-            this.btnChart.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnChart_ItemClick);
+            this.btnAddMember.Caption = "Kullanıcı Ekle";
+            this.btnAddMember.Id = 12;
+            this.btnAddMember.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem1.ImageOptions.SvgImage")));
+            this.btnAddMember.Name = "btnAddMember";
+            this.btnAddMember.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddMember_ItemClick);
             // 
             // HomeForm
             // 
@@ -270,5 +288,7 @@
         private DevExpress.XtraBars.BarStaticItem bar;
         private DevExpress.XtraBars.BarButtonItem btnChart;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
+        private DevExpress.XtraBars.BarButtonItem btnAddMember;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
     }
 }

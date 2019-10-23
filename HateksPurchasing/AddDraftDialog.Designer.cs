@@ -63,10 +63,10 @@
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.lookupDraftType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.draftTypeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hateksPurchasingDataSet)).BeginInit();
@@ -242,11 +242,11 @@
             this.tableLayoutPanel1.Controls.Add(this.btnCancel, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnDone, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 441);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 385);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(461, 100);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(461, 156);
             this.tableLayoutPanel1.TabIndex = 29;
             // 
             // btnCancel
@@ -257,7 +257,7 @@
             this.btnCancel.Margin = new System.Windows.Forms.Padding(10);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Padding = new System.Windows.Forms.Padding(25);
-            this.btnCancel.Size = new System.Drawing.Size(210, 80);
+            this.btnCancel.Size = new System.Drawing.Size(210, 136);
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "İPTAL";
             this.btnCancel.CheckedChanged += new System.EventHandler(this.btnCancel_CheckedChanged);
@@ -270,7 +270,7 @@
             this.btnDone.Margin = new System.Windows.Forms.Padding(10);
             this.btnDone.Name = "btnDone";
             this.btnDone.Padding = new System.Windows.Forms.Padding(25);
-            this.btnDone.Size = new System.Drawing.Size(211, 80);
+            this.btnDone.Size = new System.Drawing.Size(211, 136);
             this.btnDone.TabIndex = 3;
             this.btnDone.Text = "TAMAM";
             this.btnDone.CheckedChanged += new System.EventHandler(this.btnDone_CheckedChanged);
@@ -358,7 +358,7 @@
             this.gridColumn3.FieldName = "Name";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 1;
+            this.gridColumn3.VisibleIndex = 0;
             // 
             // gridColumn4
             // 
@@ -366,23 +366,7 @@
             this.gridColumn4.FieldName = "Price";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 2;
-            // 
-            // gridColumn5
-            // 
-            this.gridColumn5.Caption = "Açıklama";
-            this.gridColumn5.FieldName = "Description";
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 3;
-            // 
-            // gridColumn6
-            // 
-            this.gridColumn6.Caption = "Total Fiyat";
-            this.gridColumn6.FieldName = "TotalPrice";
-            this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 4;
+            this.gridColumn4.VisibleIndex = 1;
             // 
             // gridColumn7
             // 
@@ -390,7 +374,7 @@
             this.gridColumn7.FieldName = "CurrencyName";
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 4;
+            this.gridColumn7.VisibleIndex = 3;
             // 
             // gridColumn8
             // 
@@ -399,6 +383,22 @@
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 5;
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "Açıklama";
+            this.gridColumn5.FieldName = "Description";
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 2;
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.Caption = "Total Fiyat";
+            this.gridColumn6.FieldName = "TotalPrice";
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 4;
             // 
             // AddDraftDialog
             // 

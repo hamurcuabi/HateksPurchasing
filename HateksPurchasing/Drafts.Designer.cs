@@ -104,7 +104,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(663, 450);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(660, 441);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -119,11 +119,11 @@
             this.tableLayoutPanel2.Controls.Add(this.btnEdit, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnUpdate, 3, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 363);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 355);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(657, 84);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(654, 83);
             this.tableLayoutPanel2.TabIndex = 5;
             // 
             // btnAdd
@@ -133,10 +133,10 @@
             this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnAdd.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAdd.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAdd.ImageOptions.SvgImage")));
-            this.btnAdd.Location = new System.Drawing.Point(99, 3);
+            this.btnAdd.Location = new System.Drawing.Point(98, 3);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Padding = new System.Windows.Forms.Padding(20);
-            this.btnAdd.Size = new System.Drawing.Size(148, 78);
+            this.btnAdd.Size = new System.Drawing.Size(148, 77);
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Yeni Ekle";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -148,10 +148,10 @@
             this.btnEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnEdit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnEdit.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEdit.ImageOptions.SvgImage")));
-            this.btnEdit.Location = new System.Drawing.Point(253, 3);
+            this.btnEdit.Location = new System.Drawing.Point(252, 3);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Padding = new System.Windows.Forms.Padding(20);
-            this.btnEdit.Size = new System.Drawing.Size(148, 78);
+            this.btnEdit.Size = new System.Drawing.Size(148, 77);
             this.btnEdit.TabIndex = 1;
             this.btnEdit.Text = "Düzenle";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
@@ -162,11 +162,11 @@
             this.btnUpdate.Appearance.Options.UseFont = true;
             this.btnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnUpdate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnUpdate.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDelete.ImageOptions.SvgImage")));
-            this.btnUpdate.Location = new System.Drawing.Point(407, 3);
+            this.btnUpdate.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnUpdate.ImageOptions.SvgImage")));
+            this.btnUpdate.Location = new System.Drawing.Point(406, 3);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Padding = new System.Windows.Forms.Padding(20);
-            this.btnUpdate.Size = new System.Drawing.Size(148, 78);
+            this.btnUpdate.Size = new System.Drawing.Size(148, 77);
             this.btnUpdate.TabIndex = 2;
             this.btnUpdate.Text = "Yenile";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -178,7 +178,7 @@
             this.gridControl1.Location = new System.Drawing.Point(3, 3);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(657, 354);
+            this.gridControl1.Size = new System.Drawing.Size(654, 346);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -495,7 +495,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(663, 450);
+            this.ClientSize = new System.Drawing.Size(528, 353);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Drafts";
             this.Text = "Satın Alma";
