@@ -33,7 +33,7 @@ namespace HateksPurchasing
                 //  PrepareCompanies(int.Parse(dr["DraftTypeId"].ToString()));
             }
 
-            
+
 
             //Companies
 

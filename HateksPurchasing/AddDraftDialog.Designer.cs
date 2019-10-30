@@ -88,15 +88,19 @@
             // lookupDraftType
             // 
             this.lookupDraftType.EditValue = "";
-            this.lookupDraftType.Location = new System.Drawing.Point(162, 46);
+            this.lookupDraftType.Location = new System.Drawing.Point(139, 37);
+            this.lookupDraftType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lookupDraftType.Name = "lookupDraftType";
+            // 
+            // 
+            // 
             this.lookupDraftType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lookupDraftType.Properties.DataSource = this.draftTypeBindingSource;
             this.lookupDraftType.Properties.DisplayMember = "Name";
             this.lookupDraftType.Properties.PopupView = this.gridLookUpEdit1View;
             this.lookupDraftType.Properties.ValueMember = "ID";
-            this.lookupDraftType.Size = new System.Drawing.Size(277, 22);
+            this.lookupDraftType.Size = new System.Drawing.Size(237, 22);
             this.lookupDraftType.TabIndex = 0;
             // 
             // draftTypeBindingSource
@@ -120,7 +124,8 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(21, 40);
+            this.labelControl1.Location = new System.Drawing.Point(18, 32);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(121, 28);
             this.labelControl1.TabIndex = 20;
@@ -130,7 +135,8 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(83, 93);
+            this.labelControl2.Location = new System.Drawing.Point(71, 76);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(59, 28);
             this.labelControl2.TabIndex = 22;
@@ -139,15 +145,19 @@
             // lookupUnit
             // 
             this.lookupUnit.EditValue = "";
-            this.lookupUnit.Location = new System.Drawing.Point(162, 100);
+            this.lookupUnit.Location = new System.Drawing.Point(139, 81);
+            this.lookupUnit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lookupUnit.Name = "lookupUnit";
+            // 
+            // 
+            // 
             this.lookupUnit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lookupUnit.Properties.DataSource = this.unitBindingSource;
             this.lookupUnit.Properties.DisplayMember = "Name";
             this.lookupUnit.Properties.PopupView = this.gridView1;
             this.lookupUnit.Properties.ValueMember = "ID";
-            this.lookupUnit.Size = new System.Drawing.Size(277, 22);
+            this.lookupUnit.Size = new System.Drawing.Size(237, 22);
             this.lookupUnit.TabIndex = 21;
             // 
             // unitBindingSource
@@ -166,7 +176,8 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(72, 148);
+            this.labelControl3.Location = new System.Drawing.Point(62, 120);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(70, 28);
             this.labelControl3.TabIndex = 24;
@@ -175,15 +186,19 @@
             // lookupState
             // 
             this.lookupState.EditValue = "";
-            this.lookupState.Location = new System.Drawing.Point(162, 387);
+            this.lookupState.Location = new System.Drawing.Point(139, 314);
+            this.lookupState.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lookupState.Name = "lookupState";
+            // 
+            // 
+            // 
             this.lookupState.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lookupState.Properties.DataSource = this.stateBindingSource;
             this.lookupState.Properties.DisplayMember = "Name";
             this.lookupState.Properties.PopupView = this.gridView2;
             this.lookupState.Properties.ValueMember = "ID";
-            this.lookupState.Size = new System.Drawing.Size(277, 22);
+            this.lookupState.Size = new System.Drawing.Size(237, 22);
             this.lookupState.TabIndex = 23;
             // 
             // stateBindingSource
@@ -200,18 +215,23 @@
             // 
             // txtAmount
             // 
-            this.txtAmount.Location = new System.Drawing.Point(162, 155);
+            this.txtAmount.Location = new System.Drawing.Point(139, 126);
+            this.txtAmount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAmount.Name = "txtAmount";
+            // 
+            // 
+            // 
             this.txtAmount.Properties.Mask.EditMask = "d";
             this.txtAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtAmount.Size = new System.Drawing.Size(277, 22);
+            this.txtAmount.Size = new System.Drawing.Size(237, 22);
             this.txtAmount.TabIndex = 25;
             // 
             // labelControl4
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(65, 381);
+            this.labelControl4.Location = new System.Drawing.Point(56, 310);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(77, 28);
             this.labelControl4.TabIndex = 26;
@@ -221,7 +241,8 @@
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(45, 204);
+            this.labelControl5.Location = new System.Drawing.Point(39, 166);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(97, 28);
             this.labelControl5.TabIndex = 27;
@@ -229,9 +250,10 @@
             // 
             // txtDescp
             // 
-            this.txtDescp.Location = new System.Drawing.Point(162, 203);
+            this.txtDescp.Location = new System.Drawing.Point(139, 165);
+            this.txtDescp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDescp.Name = "txtDescp";
-            this.txtDescp.Size = new System.Drawing.Size(277, 111);
+            this.txtDescp.Size = new System.Drawing.Size(237, 90);
             this.txtDescp.TabIndex = 28;
             // 
             // tableLayoutPanel1
@@ -242,22 +264,23 @@
             this.tableLayoutPanel1.Controls.Add(this.btnCancel, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnDone, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 385);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 360);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(461, 156);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(395, 127);
             this.tableLayoutPanel1.TabIndex = 29;
             // 
             // btnCancel
             // 
             this.btnCancel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnCancel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCancel.ImageOptions.SvgImage")));
-            this.btnCancel.Location = new System.Drawing.Point(10, 10);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(10);
+            this.btnCancel.Location = new System.Drawing.Point(9, 8);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Padding = new System.Windows.Forms.Padding(25);
-            this.btnCancel.Size = new System.Drawing.Size(210, 136);
+            this.btnCancel.Padding = new System.Windows.Forms.Padding(21, 20, 21, 20);
+            this.btnCancel.Size = new System.Drawing.Size(179, 111);
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "İPTAL";
             this.btnCancel.CheckedChanged += new System.EventHandler(this.btnCancel_CheckedChanged);
@@ -266,11 +289,11 @@
             // 
             this.btnDone.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnDone.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDone.ImageOptions.SvgImage")));
-            this.btnDone.Location = new System.Drawing.Point(240, 10);
-            this.btnDone.Margin = new System.Windows.Forms.Padding(10);
+            this.btnDone.Location = new System.Drawing.Point(206, 8);
+            this.btnDone.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.btnDone.Name = "btnDone";
-            this.btnDone.Padding = new System.Windows.Forms.Padding(25);
-            this.btnDone.Size = new System.Drawing.Size(211, 136);
+            this.btnDone.Padding = new System.Windows.Forms.Padding(21, 20, 21, 20);
+            this.btnDone.Size = new System.Drawing.Size(180, 111);
             this.btnDone.TabIndex = 3;
             this.btnDone.Text = "TAMAM";
             this.btnDone.CheckedChanged += new System.EventHandler(this.btnDone_CheckedChanged);
@@ -295,7 +318,8 @@
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(23, 326);
+            this.labelControl6.Location = new System.Drawing.Point(20, 265);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(119, 28);
             this.labelControl6.TabIndex = 31;
@@ -313,15 +337,19 @@
             // lookupOffers
             // 
             this.lookupOffers.EditValue = "";
-            this.lookupOffers.Location = new System.Drawing.Point(162, 328);
+            this.lookupOffers.Location = new System.Drawing.Point(139, 266);
+            this.lookupOffers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lookupOffers.Name = "lookupOffers";
+            // 
+            // 
+            // 
             this.lookupOffers.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lookupOffers.Properties.DataSource = this.viewOfferingBindingSource;
             this.lookupOffers.Properties.DisplayMember = "Name";
             this.lookupOffers.Properties.PopupView = this.gridView3;
             this.lookupOffers.Properties.ValueMember = "ID";
-            this.lookupOffers.Size = new System.Drawing.Size(277, 22);
+            this.lookupOffers.Size = new System.Drawing.Size(237, 22);
             this.lookupOffers.TabIndex = 32;
             // 
             // gridView3
@@ -402,9 +430,9 @@
             // 
             // AddDraftDialog
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(461, 541);
+            this.ClientSize = new System.Drawing.Size(395, 487);
             this.Controls.Add(this.lookupOffers);
             this.Controls.Add(this.labelControl6);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -418,6 +446,7 @@
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.lookupDraftType);
             this.Controls.Add(this.txtDescp);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AddDraftDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Satın Alma Ekle-Güncelle";
