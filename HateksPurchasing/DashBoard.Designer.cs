@@ -28,29 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.SideBySideBarSeriesView sideBySideBarSeriesView1 = new DevExpress.XtraCharts.SideBySideBarSeriesView();
             DevExpress.XtraCharts.HatchFillOptions hatchFillOptions1 = new DevExpress.XtraCharts.HatchFillOptions();
-            this.hateksPurchasingDataSet1 = new HateksPurchasing.HateksPurchasingDataSet();
             this.chart = new DevExpress.XtraCharts.ChartControl();
+            this.getTotalPriceByDraftBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hateksPurchasingDataSet1 = new HateksPurchasing.HateksPurchasingDataSet();
             this.getTotalPriceByDraftTableAdapter1 = new HateksPurchasing.HateksPurchasingDataSetTableAdapters.GetTotalPriceByDraftTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.hateksPurchasingDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getTotalPriceByDraftBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hateksPurchasingDataSet1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // hateksPurchasingDataSet1
-            // 
-            this.hateksPurchasingDataSet1.DataSetName = "HateksPurchasingDataSet";
-            this.hateksPurchasingDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // chart
             // 
             this.chart.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnLoad;
             this.chart.DataAdapter = this.getTotalPriceByDraftTableAdapter1;
+            this.chart.DataSource = this.getTotalPriceByDraftBindingSource;
             xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
             xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
             this.chart.Diagram = xyDiagram1;
@@ -71,6 +70,17 @@
             this.chart.Size = new System.Drawing.Size(790, 620);
             this.chart.TabIndex = 0;
             // 
+            // getTotalPriceByDraftBindingSource
+            // 
+            this.getTotalPriceByDraftBindingSource.DataMember = "GetTotalPriceByDraft";
+            this.getTotalPriceByDraftBindingSource.DataSource = this.hateksPurchasingDataSet1;
+            this.getTotalPriceByDraftBindingSource.Sort = "";
+            // 
+            // hateksPurchasingDataSet1
+            // 
+            this.hateksPurchasingDataSet1.DataSetName = "HateksPurchasingDataSet";
+            this.hateksPurchasingDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // getTotalPriceByDraftTableAdapter1
             // 
             this.getTotalPriceByDraftTableAdapter1.ClearBeforeFill = true;
@@ -84,18 +94,21 @@
             this.Name = "DashBoard";
             this.Text = "Statistikler";
             this.Load += new System.EventHandler(this.DashBoard_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.hateksPurchasingDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getTotalPriceByDraftBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hateksPurchasingDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private HateksPurchasingDataSet hateksPurchasingDataSet1;
         private DevExpress.XtraCharts.ChartControl chart;
+        private HateksPurchasingDataSetTableAdapters.GetTotalPriceByDraftTableAdapter getTotalPriceByDraftTableAdapter;
         private HateksPurchasingDataSetTableAdapters.GetTotalPriceByDraftTableAdapter getTotalPriceByDraftTableAdapter1;
+        private System.Windows.Forms.BindingSource getTotalPriceByDraftBindingSource;
+        private HateksPurchasingDataSet hateksPurchasingDataSet1;
     }
 }

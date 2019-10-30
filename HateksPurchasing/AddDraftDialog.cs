@@ -28,7 +28,14 @@ namespace HateksPurchasing
             lookupDraftType.EditValue = row.DraftTypeId;
             lookupState.EditValue = row.StateId;
             lookupUnit.EditValue = row.UnitId;
-            lookupOffers.EditValue = row.SelectedOffering;
+            try
+            {
+                lookupOffers.EditValue = row.SelectedOffering;
+            }
+            catch (Exception)
+            {
+            }
+
             txtAmount.Text = row.Amount.ToString();
             txtDescp.Text = row.Description;
             isNew = false;

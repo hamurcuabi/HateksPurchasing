@@ -242,11 +242,11 @@
             this.tableLayoutPanel1.Controls.Add(this.btnCancel, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnDone, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 385);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 415);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(461, 156);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(461, 126);
             this.tableLayoutPanel1.TabIndex = 29;
             // 
             // btnCancel
@@ -257,7 +257,7 @@
             this.btnCancel.Margin = new System.Windows.Forms.Padding(10);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Padding = new System.Windows.Forms.Padding(25);
-            this.btnCancel.Size = new System.Drawing.Size(210, 136);
+            this.btnCancel.Size = new System.Drawing.Size(210, 106);
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "İPTAL";
             this.btnCancel.CheckedChanged += new System.EventHandler(this.btnCancel_CheckedChanged);
@@ -270,7 +270,7 @@
             this.btnDone.Margin = new System.Windows.Forms.Padding(10);
             this.btnDone.Name = "btnDone";
             this.btnDone.Padding = new System.Windows.Forms.Padding(25);
-            this.btnDone.Size = new System.Drawing.Size(211, 136);
+            this.btnDone.Size = new System.Drawing.Size(211, 106);
             this.btnDone.TabIndex = 3;
             this.btnDone.Text = "TAMAM";
             this.btnDone.CheckedChanged += new System.EventHandler(this.btnDone_CheckedChanged);
