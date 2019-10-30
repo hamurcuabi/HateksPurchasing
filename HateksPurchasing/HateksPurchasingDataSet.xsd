@@ -2,15 +2,16 @@
 <xs:schema id="HateksPurchasingDataSet" targetNamespace="http://tempuri.org/HateksPurchasingDataSet.xsd" xmlns:mstns="http://tempuri.org/HateksPurchasingDataSet.xsd" xmlns="http://tempuri.org/HateksPurchasingDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="2" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="HateksPurchasingConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="HateksPurchasingConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.HateksPurchasing.Properties.Settings.GlobalReference.Default.HateksPurchasingConnectionString" Provider="System.Data.SqlClient" />
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="HateksPurchasingConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="HateksPurchasingConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.HateksPurchasing.Properties.Settings.GlobalReference.Default.HateksPurchasingConnectionString1" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="HateksPurchasingConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="HateksPurchasingConnectionString2 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.HateksPurchasing.Properties.Settings.GlobalReference.Default.HateksPurchasingConnectionString2" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CurrencyTableAdapter" GeneratorDataComponentClassName="CurrencyTableAdapter" Name="Currency" UserDataComponentName="CurrencyTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="HateksPurchasingConnectionString (Settings)" DbObjectName="HateksPurchasing.dbo.Currency" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="HateksPurchasingConnectionString2 (Settings)" DbObjectName="HateksPurchasing.dbo.Currency" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Currency] WHERE (([ID] = @Original_ID) AND ([Name] = @Original_Name) AND ((@IsNull_ShortCode = 1 AND [ShortCode] IS NULL) OR ([ShortCode] = @Original_ShortCode)) AND ((@IsNull_Date = 1 AND [Date] IS NULL) OR ([Date] = @Original_Date)))</CommandText>
@@ -71,7 +72,7 @@ SELECT ID, Name, ShortCode, Date FROM Currency WHERE (ID = @ID)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DraftTableAdapter" GeneratorDataComponentClassName="DraftTableAdapter" Name="Draft" UserDataComponentName="DraftTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="HateksPurchasingConnectionString (Settings)" DbObjectName="HateksPurchasing.dbo.Draft" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="HateksPurchasingConnectionString2 (Settings)" DbObjectName="HateksPurchasing.dbo.Draft" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Draft] WHERE (([ID] = @Original_ID) AND ((@IsNull_DraftId = 1 AND [DraftId] IS NULL) OR ([DraftId] = @Original_DraftId)) AND ([DraftTypeId] = @Original_DraftTypeId) AND ([UnitId] = @Original_UnitId) AND ([MemberId] = @Original_MemberId) AND ([Amount] = @Original_Amount) AND ((@IsNull_BillDate = 1 AND [BillDate] IS NULL) OR ([BillDate] = @Original_BillDate)) AND ((@IsNull_ReturnDate = 1 AND [ReturnDate] IS NULL) OR ([ReturnDate] = @Original_ReturnDate)) AND ((@IsNull_OrderDate = 1 AND [OrderDate] IS NULL) OR ([OrderDate] = @Original_OrderDate)) AND ((@IsNull_DeliveryToWarehouseDate = 1 AND [DeliveryToWarehouseDate] IS NULL) OR ([DeliveryToWarehouseDate] = @Original_DeliveryToWarehouseDate)) AND ((@IsNull_GenerateDate = 1 AND [GenerateDate] IS NULL) OR ([GenerateDate] = @Original_GenerateDate)) AND ([StateId] = @Original_StateId) AND ((@IsNull_SelectedOffering = 1 AND [SelectedOffering] IS NULL) OR ([SelectedOffering] = @Original_SelectedOffering)))</CommandText>
@@ -188,7 +189,7 @@ SELECT ID, DraftId, DraftTypeId, UnitId, MemberId, Amount, Description, BillDate
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DraftTypeTableAdapter" GeneratorDataComponentClassName="DraftTypeTableAdapter" Name="DraftType" UserDataComponentName="DraftTypeTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="HateksPurchasingConnectionString (Settings)" DbObjectName="HateksPurchasing.dbo.DraftType" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="HateksPurchasingConnectionString2 (Settings)" DbObjectName="HateksPurchasing.dbo.DraftType" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[DraftType] WHERE (([ID] = @Original_ID) AND ([Name] = @Original_Name) AND ((@IsNull_Date = 1 AND [Date] IS NULL) OR ([Date] = @Original_Date)))</CommandText>
@@ -242,7 +243,7 @@ SELECT ID, Name, Date FROM DraftType WHERE (ID = @ID)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MemberTableAdapter" GeneratorDataComponentClassName="MemberTableAdapter" Name="Member" UserDataComponentName="MemberTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="HateksPurchasingConnectionString (Settings)" DbObjectName="HateksPurchasing.dbo.Member" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="HateksPurchasingConnectionString2 (Settings)" DbObjectName="HateksPurchasing.dbo.Member" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Member] WHERE (([ID] = @Original_ID) AND ((@IsNull_Name = 1 AND [Name] IS NULL) OR ([Name] = @Original_Name)) AND ((@IsNull_Surname = 1 AND [Surname] IS NULL) OR ([Surname] = @Original_Surname)) AND ([Email] = @Original_Email) AND ([Password] = @Original_Password) AND ((@IsNull_IsLogin = 1 AND [IsLogin] IS NULL) OR ([IsLogin] = @Original_IsLogin)) AND ((@IsNull_Date = 1 AND [Date] IS NULL) OR ([Date] = @Original_Date)))</CommandText>
@@ -322,7 +323,7 @@ SELECT ID, Name, Surname, Email, Password, IsLogin, Date FROM Member WHERE (ID =
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="OfferingTableAdapter" GeneratorDataComponentClassName="OfferingTableAdapter" Name="Offering" UserDataComponentName="OfferingTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="HateksPurchasingConnectionString (Settings)" DbObjectName="HateksPurchasing.dbo.Offering" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="HateksPurchasingConnectionString2 (Settings)" DbObjectName="HateksPurchasing.dbo.Offering" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Offering] WHERE (([ID] = @Original_ID) AND ([DraftId] = @Original_DraftId) AND ([OfferingCompanyId] = @Original_OfferingCompanyId) AND ((@IsNull_Date = 1 AND [Date] IS NULL) OR ([Date] = @Original_Date)) AND ((@IsNull_Price = 1 AND [Price] IS NULL) OR ([Price] = @Original_Price)) AND ((@IsNull_CurrencyId = 1 AND [CurrencyId] IS NULL) OR ([CurrencyId] = @Original_CurrencyId)) AND ((@IsNull_CurrencyRate = 1 AND [CurrencyRate] IS NULL) OR ([CurrencyRate] = @Original_CurrencyRate)))</CommandText>
@@ -405,7 +406,7 @@ SELECT ID, DraftId, OfferingCompanyId, Description, Date, Price, CurrencyId, Cur
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="OfferingCompanyTableAdapter" GeneratorDataComponentClassName="OfferingCompanyTableAdapter" Name="OfferingCompany" UserDataComponentName="OfferingCompanyTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="HateksPurchasingConnectionString (Settings)" DbObjectName="HateksPurchasing.dbo.OfferingCompany" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="HateksPurchasingConnectionString2 (Settings)" DbObjectName="HateksPurchasing.dbo.OfferingCompany" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[OfferingCompany] WHERE (([ID] = @Original_ID) AND ([Name] = @Original_Name) AND ((@IsNull_Phone = 1 AND [Phone] IS NULL) OR ([Phone] = @Original_Phone)) AND ((@IsNull_Email = 1 AND [Email] IS NULL) OR ([Email] = @Original_Email)) AND ((@IsNull_Date = 1 AND [Date] IS NULL) OR ([Date] = @Original_Date)))</CommandText>
@@ -473,7 +474,7 @@ SELECT ID, Name, Phone, Email, Date FROM OfferingCompany WHERE (ID = @ID)</Comma
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="StateTableAdapter" GeneratorDataComponentClassName="StateTableAdapter" Name="State" UserDataComponentName="StateTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="HateksPurchasingConnectionString (Settings)" DbObjectName="HateksPurchasing.dbo.State" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="HateksPurchasingConnectionString2 (Settings)" DbObjectName="HateksPurchasing.dbo.State" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[State] WHERE (([ID] = @Original_ID) AND ([Name] = @Original_Name) AND ([Color] = @Original_Color))</CommandText>
@@ -528,7 +529,7 @@ SELECT ID, Name, Color, Description FROM State WHERE (ID = @ID)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="UnitTableAdapter" GeneratorDataComponentClassName="UnitTableAdapter" Name="Unit" UserDataComponentName="UnitTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="HateksPurchasingConnectionString (Settings)" DbObjectName="HateksPurchasing.dbo.Unit" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="HateksPurchasingConnectionString2 (Settings)" DbObjectName="HateksPurchasing.dbo.Unit" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Unit] WHERE (([ID] = @Original_ID) AND ([Name] = @Original_Name) AND ((@IsNull_Date = 1 AND [Date] IS NULL) OR ([Date] = @Original_Date)))</CommandText>
@@ -582,7 +583,7 @@ SELECT ID, Name, Date FROM Unit WHERE (ID = @ID)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ViewDraftTableAdapter" GeneratorDataComponentClassName="ViewDraftTableAdapter" Name="ViewDraft" UserDataComponentName="ViewDraftTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="HateksPurchasingConnectionString (Settings)" DbObjectName="HateksPurchasing.dbo.ViewDraft" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="HateksPurchasingConnectionString2 (Settings)" DbObjectName="HateksPurchasing.dbo.ViewDraft" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT ID, DraftId, DraftTypeId, DraftFormNo, DraftTypeName, Name, UnitName, Amount, Description, SelectedOffering, CompanyId, OfferingName, Price, CurrencyRate, CurrencyName, ShortCode, OfferingDescription, OfferingDate, CompanyName, StateName, Color, StateId, BillDate, ReturnDate, OrderDate, DeliveryToWarehouseDate, GenerateDate, TotalPrice, TotalPriceNumeric, TotalPriceText FROM dbo.ViewDraft</CommandText>
@@ -627,7 +628,7 @@ SELECT ID, Name, Date FROM Unit WHERE (ID = @ID)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ViewOfferingTableAdapter" GeneratorDataComponentClassName="ViewOfferingTableAdapter" Name="ViewOffering" UserDataComponentName="ViewOfferingTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="HateksPurchasingConnectionString (Settings)" DbObjectName="HateksPurchasing.dbo.ViewOffering" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="HateksPurchasingConnectionString2 (Settings)" DbObjectName="HateksPurchasing.dbo.ViewOffering" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT ID, DraftId, DrafFormNo, CompanyId, Name, Price, CurrencyName, ShortCode, CurrencyRate, Description, Date, Amount, TotalPrice FROM dbo.ViewOffering</CommandText>
@@ -655,7 +656,7 @@ SELECT ID, Name, Date FROM Unit WHERE (ID = @ID)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GetTotalPriceByCompanyTableAdapter" GeneratorDataComponentClassName="GetTotalPriceByCompanyTableAdapter" Name="GetTotalPriceByCompany" UserDataComponentName="GetTotalPriceByCompanyTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="HateksPurchasingConnectionString1 (Settings)" DbObjectName="HateksPurchasing.dbo.GetTotalPriceByCompany" DbObjectType="Function" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="HateksPurchasingConnectionString2 (Settings)" DbObjectName="HateksPurchasing.dbo.GetTotalPriceByCompany" DbObjectType="Function" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT CompanyId, CompanyName, DraftTypeId, DraftTypeName, TotalPrice FROM dbo.GetTotalPriceByCompany()</CommandText>
@@ -675,7 +676,7 @@ SELECT ID, Name, Date FROM Unit WHERE (ID = @ID)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GetTotalPriceByDraftTableAdapter" GeneratorDataComponentClassName="GetTotalPriceByDraftTableAdapter" Name="GetTotalPriceByDraft" UserDataComponentName="GetTotalPriceByDraftTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="HateksPurchasingConnectionString1 (Settings)" DbObjectName="HateksPurchasing.dbo.GetTotalPriceByDraft" DbObjectType="Function" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="HateksPurchasingConnectionString2 (Settings)" DbObjectName="HateksPurchasing.dbo.GetTotalPriceByDraft" DbObjectType="Function" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT Total, DraftTypeId, DraftTypeName FROM dbo.GetTotalPriceByDraft()</CommandText>
@@ -691,9 +692,56 @@ SELECT ID, Name, Date FROM Unit WHERE (ID = @ID)</CommandText>
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ViewDraftByIdTableAdapter" GeneratorDataComponentClassName="ViewDraftByIdTableAdapter" Name="ViewDraftById" UserDataComponentName="ViewDraftByIdTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="HateksPurchasingConnectionString2 (Settings)" DbObjectName="HateksPurchasing.dbo.ViewDraftById" DbObjectType="Function" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, DraftId, DraftTypeId, DraftFormNo, DraftTypeName, Name, UnitName, Amount, Description, SelectedOffering, CompanyId, OfferingName, Price, CurrencyRate, CurrencyName, ShortCode, OfferingDescription, OfferingDate, CompanyName, StateName, Color, StateId, BillDate, ReturnDate, OrderDate, DeliveryToWarehouseDate, GenerateDate, TotalPrice, TotalPriceNumeric, TotalPriceText FROM dbo.ViewDraftById(@id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="id" ColumnName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id" Precision="0" Scale="0" Size="0" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="DraftId" DataSetColumn="DraftId" />
+              <Mapping SourceColumn="DraftTypeId" DataSetColumn="DraftTypeId" />
+              <Mapping SourceColumn="DraftFormNo" DataSetColumn="DraftFormNo" />
+              <Mapping SourceColumn="DraftTypeName" DataSetColumn="DraftTypeName" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="UnitName" DataSetColumn="UnitName" />
+              <Mapping SourceColumn="Amount" DataSetColumn="Amount" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="SelectedOffering" DataSetColumn="SelectedOffering" />
+              <Mapping SourceColumn="CompanyId" DataSetColumn="CompanyId" />
+              <Mapping SourceColumn="OfferingName" DataSetColumn="OfferingName" />
+              <Mapping SourceColumn="Price" DataSetColumn="Price" />
+              <Mapping SourceColumn="CurrencyRate" DataSetColumn="CurrencyRate" />
+              <Mapping SourceColumn="CurrencyName" DataSetColumn="CurrencyName" />
+              <Mapping SourceColumn="ShortCode" DataSetColumn="ShortCode" />
+              <Mapping SourceColumn="OfferingDescription" DataSetColumn="OfferingDescription" />
+              <Mapping SourceColumn="OfferingDate" DataSetColumn="OfferingDate" />
+              <Mapping SourceColumn="CompanyName" DataSetColumn="CompanyName" />
+              <Mapping SourceColumn="StateName" DataSetColumn="StateName" />
+              <Mapping SourceColumn="Color" DataSetColumn="Color" />
+              <Mapping SourceColumn="StateId" DataSetColumn="StateId" />
+              <Mapping SourceColumn="BillDate" DataSetColumn="BillDate" />
+              <Mapping SourceColumn="ReturnDate" DataSetColumn="ReturnDate" />
+              <Mapping SourceColumn="OrderDate" DataSetColumn="OrderDate" />
+              <Mapping SourceColumn="DeliveryToWarehouseDate" DataSetColumn="DeliveryToWarehouseDate" />
+              <Mapping SourceColumn="GenerateDate" DataSetColumn="GenerateDate" />
+              <Mapping SourceColumn="TotalPrice" DataSetColumn="TotalPrice" />
+              <Mapping SourceColumn="TotalPriceNumeric" DataSetColumn="TotalPriceNumeric" />
+              <Mapping SourceColumn="TotalPriceText" DataSetColumn="TotalPriceText" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources>
-          <DbSource ConnectionRef="HateksPurchasingConnectionString1 (Settings)" DbObjectName="HateksPurchasing.dbo.GetTotalPriceViewDraftById" DbObjectType="Function" GenerateShortCommands="true" GeneratorSourceName="GetTotalPriceViewDraftById" MethodsParameterType="CLR" Modifier="Public" Name="GetTotalPriceViewDraftById" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="GetTotalPriceViewDraftById">
+          <DbSource ConnectionRef="HateksPurchasingConnectionString2 (Settings)" DbObjectName="HateksPurchasing.dbo.GetTotalPriceViewDraftById" DbObjectType="Function" GenerateShortCommands="true" GeneratorSourceName="GetTotalPriceViewDraftById" MethodsParameterType="CLR" Modifier="Public" Name="GetTotalPriceViewDraftById" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="GetTotalPriceViewDraftById">
             <SelectCommand>
               <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                 <CommandText>dbo.GetTotalPriceViewDraftById</CommandText>
@@ -1116,6 +1164,132 @@ SELECT ID, Name, Date FROM Unit WHERE (ID = @ID)</CommandText>
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ViewDraftById" msprop:Generator_TableClassName="ViewDraftByIdDataTable" msprop:Generator_TableVarName="tableViewDraftById" msprop:Generator_TablePropName="ViewDraftById" msprop:Generator_RowDeletingName="ViewDraftByIdRowDeleting" msprop:Generator_RowChangingName="ViewDraftByIdRowChanging" msprop:Generator_RowEvHandlerName="ViewDraftByIdRowChangeEventHandler" msprop:Generator_RowDeletedName="ViewDraftByIdRowDeleted" msprop:Generator_UserTableName="ViewDraftById" msprop:Generator_RowChangedName="ViewDraftByIdRowChanged" msprop:Generator_RowEvArgName="ViewDraftByIdRowChangeEvent" msprop:Generator_RowClassName="ViewDraftByIdRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="DraftId" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDraftId" msprop:Generator_ColumnPropNameInRow="DraftId" msprop:Generator_ColumnPropNameInTable="DraftIdColumn" msprop:Generator_UserColumnName="DraftId" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DraftTypeId" msprop:Generator_ColumnVarNameInTable="columnDraftTypeId" msprop:Generator_ColumnPropNameInRow="DraftTypeId" msprop:Generator_ColumnPropNameInTable="DraftTypeIdColumn" msprop:Generator_UserColumnName="DraftTypeId" type="xs:int" />
+              <xs:element name="DraftFormNo" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDraftFormNo" msprop:Generator_ColumnPropNameInRow="DraftFormNo" msprop:Generator_ColumnPropNameInTable="DraftFormNoColumn" msprop:Generator_UserColumnName="DraftFormNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DraftTypeName" msprop:Generator_ColumnVarNameInTable="columnDraftTypeName" msprop:Generator_ColumnPropNameInRow="DraftTypeName" msprop:Generator_ColumnPropNameInTable="DraftTypeNameColumn" msprop:Generator_UserColumnName="DraftTypeName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UnitName" msprop:Generator_ColumnVarNameInTable="columnUnitName" msprop:Generator_ColumnPropNameInRow="UnitName" msprop:Generator_ColumnPropNameInTable="UnitNameColumn" msprop:Generator_UserColumnName="UnitName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Amount" msprop:Generator_ColumnVarNameInTable="columnAmount" msprop:Generator_ColumnPropNameInRow="Amount" msprop:Generator_ColumnPropNameInTable="AmountColumn" msprop:Generator_UserColumnName="Amount" type="xs:double" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SelectedOffering" msprop:Generator_ColumnVarNameInTable="columnSelectedOffering" msprop:Generator_ColumnPropNameInRow="SelectedOffering" msprop:Generator_ColumnPropNameInTable="SelectedOfferingColumn" msprop:Generator_UserColumnName="SelectedOffering" type="xs:int" minOccurs="0" />
+              <xs:element name="CompanyId" msprop:Generator_ColumnVarNameInTable="columnCompanyId" msprop:Generator_ColumnPropNameInRow="CompanyId" msprop:Generator_ColumnPropNameInTable="CompanyIdColumn" msprop:Generator_UserColumnName="CompanyId" type="xs:int" minOccurs="0" />
+              <xs:element name="OfferingName" msprop:Generator_ColumnVarNameInTable="columnOfferingName" msprop:Generator_ColumnPropNameInRow="OfferingName" msprop:Generator_ColumnPropNameInTable="OfferingNameColumn" msprop:Generator_UserColumnName="OfferingName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" msprop:Generator_UserColumnName="Price" type="xs:double" minOccurs="0" />
+              <xs:element name="CurrencyRate" msprop:Generator_ColumnVarNameInTable="columnCurrencyRate" msprop:Generator_ColumnPropNameInRow="CurrencyRate" msprop:Generator_ColumnPropNameInTable="CurrencyRateColumn" msprop:Generator_UserColumnName="CurrencyRate" type="xs:double" minOccurs="0" />
+              <xs:element name="CurrencyName" msprop:Generator_ColumnVarNameInTable="columnCurrencyName" msprop:Generator_ColumnPropNameInRow="CurrencyName" msprop:Generator_ColumnPropNameInTable="CurrencyNameColumn" msprop:Generator_UserColumnName="CurrencyName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShortCode" msprop:Generator_ColumnVarNameInTable="columnShortCode" msprop:Generator_ColumnPropNameInRow="ShortCode" msprop:Generator_ColumnPropNameInTable="ShortCodeColumn" msprop:Generator_UserColumnName="ShortCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OfferingDescription" msprop:Generator_ColumnVarNameInTable="columnOfferingDescription" msprop:Generator_ColumnPropNameInRow="OfferingDescription" msprop:Generator_ColumnPropNameInTable="OfferingDescriptionColumn" msprop:Generator_UserColumnName="OfferingDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OfferingDate" msprop:Generator_ColumnVarNameInTable="columnOfferingDate" msprop:Generator_ColumnPropNameInRow="OfferingDate" msprop:Generator_ColumnPropNameInTable="OfferingDateColumn" msprop:Generator_UserColumnName="OfferingDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CompanyName" msprop:Generator_ColumnVarNameInTable="columnCompanyName" msprop:Generator_ColumnPropNameInRow="CompanyName" msprop:Generator_ColumnPropNameInTable="CompanyNameColumn" msprop:Generator_UserColumnName="CompanyName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StateName" msprop:Generator_ColumnVarNameInTable="columnStateName" msprop:Generator_ColumnPropNameInRow="StateName" msprop:Generator_ColumnPropNameInTable="StateNameColumn" msprop:Generator_UserColumnName="StateName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Color" msprop:Generator_ColumnVarNameInTable="columnColor" msprop:Generator_ColumnPropNameInRow="Color" msprop:Generator_ColumnPropNameInTable="ColorColumn" msprop:Generator_UserColumnName="Color">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StateId" msprop:Generator_ColumnVarNameInTable="columnStateId" msprop:Generator_ColumnPropNameInRow="StateId" msprop:Generator_ColumnPropNameInTable="StateIdColumn" msprop:Generator_UserColumnName="StateId" type="xs:int" />
+              <xs:element name="BillDate" msprop:Generator_ColumnVarNameInTable="columnBillDate" msprop:Generator_ColumnPropNameInRow="BillDate" msprop:Generator_ColumnPropNameInTable="BillDateColumn" msprop:Generator_UserColumnName="BillDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ReturnDate" msprop:Generator_ColumnVarNameInTable="columnReturnDate" msprop:Generator_ColumnPropNameInRow="ReturnDate" msprop:Generator_ColumnPropNameInTable="ReturnDateColumn" msprop:Generator_UserColumnName="ReturnDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="OrderDate" msprop:Generator_ColumnVarNameInTable="columnOrderDate" msprop:Generator_ColumnPropNameInRow="OrderDate" msprop:Generator_ColumnPropNameInTable="OrderDateColumn" msprop:Generator_UserColumnName="OrderDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DeliveryToWarehouseDate" msprop:Generator_ColumnVarNameInTable="columnDeliveryToWarehouseDate" msprop:Generator_ColumnPropNameInRow="DeliveryToWarehouseDate" msprop:Generator_ColumnPropNameInTable="DeliveryToWarehouseDateColumn" msprop:Generator_UserColumnName="DeliveryToWarehouseDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="GenerateDate" msprop:Generator_ColumnVarNameInTable="columnGenerateDate" msprop:Generator_ColumnPropNameInRow="GenerateDate" msprop:Generator_ColumnPropNameInTable="GenerateDateColumn" msprop:Generator_UserColumnName="GenerateDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TotalPrice" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalPrice" msprop:Generator_ColumnPropNameInRow="TotalPrice" msprop:Generator_ColumnPropNameInTable="TotalPriceColumn" msprop:Generator_UserColumnName="TotalPrice" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="51" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TotalPriceNumeric" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalPriceNumeric" msprop:Generator_ColumnPropNameInRow="TotalPriceNumeric" msprop:Generator_ColumnPropNameInTable="TotalPriceNumericColumn" msprop:Generator_UserColumnName="TotalPriceNumeric" type="xs:double" minOccurs="0" />
+              <xs:element name="TotalPriceText" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalPriceText" msprop:Generator_ColumnPropNameInRow="TotalPriceText" msprop:Generator_ColumnPropNameInTable="TotalPriceTextColumn" msprop:Generator_UserColumnName="TotalPriceText" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="157" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
