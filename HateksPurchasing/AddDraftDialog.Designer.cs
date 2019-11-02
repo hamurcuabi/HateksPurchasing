@@ -88,7 +88,7 @@
             // lookupDraftType
             // 
             this.lookupDraftType.EditValue = "";
-            this.lookupDraftType.Location = new System.Drawing.Point(162, 46);
+            this.lookupDraftType.Location = new System.Drawing.Point(189, 46);
             this.lookupDraftType.Name = "lookupDraftType";
             this.lookupDraftType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -120,7 +120,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(21, 40);
+            this.labelControl1.Location = new System.Drawing.Point(41, 39);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(121, 28);
             this.labelControl1.TabIndex = 20;
@@ -130,7 +130,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(83, 93);
+            this.labelControl2.Location = new System.Drawing.Point(103, 93);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(59, 28);
             this.labelControl2.TabIndex = 22;
@@ -139,7 +139,7 @@
             // lookupUnit
             // 
             this.lookupUnit.EditValue = "";
-            this.lookupUnit.Location = new System.Drawing.Point(162, 100);
+            this.lookupUnit.Location = new System.Drawing.Point(189, 100);
             this.lookupUnit.Name = "lookupUnit";
             this.lookupUnit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -148,7 +148,7 @@
             this.lookupUnit.Properties.PopupView = this.gridView1;
             this.lookupUnit.Properties.ValueMember = "ID";
             this.lookupUnit.Size = new System.Drawing.Size(277, 22);
-            this.lookupUnit.TabIndex = 21;
+            this.lookupUnit.TabIndex = 1;
             // 
             // unitBindingSource
             // 
@@ -166,7 +166,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(72, 148);
+            this.labelControl3.Location = new System.Drawing.Point(92, 148);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(70, 28);
             this.labelControl3.TabIndex = 24;
@@ -175,7 +175,7 @@
             // lookupState
             // 
             this.lookupState.EditValue = "";
-            this.lookupState.Location = new System.Drawing.Point(162, 387);
+            this.lookupState.Location = new System.Drawing.Point(189, 387);
             this.lookupState.Name = "lookupState";
             this.lookupState.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -184,7 +184,7 @@
             this.lookupState.Properties.PopupView = this.gridView2;
             this.lookupState.Properties.ValueMember = "ID";
             this.lookupState.Size = new System.Drawing.Size(277, 22);
-            this.lookupState.TabIndex = 23;
+            this.lookupState.TabIndex = 5;
             // 
             // stateBindingSource
             // 
@@ -200,18 +200,18 @@
             // 
             // txtAmount
             // 
-            this.txtAmount.Location = new System.Drawing.Point(162, 155);
+            this.txtAmount.Location = new System.Drawing.Point(189, 155);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Properties.Mask.EditMask = "d";
             this.txtAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtAmount.Size = new System.Drawing.Size(277, 22);
-            this.txtAmount.TabIndex = 25;
+            this.txtAmount.TabIndex = 2;
             // 
             // labelControl4
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(65, 381);
+            this.labelControl4.Location = new System.Drawing.Point(85, 381);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(77, 28);
             this.labelControl4.TabIndex = 26;
@@ -221,18 +221,18 @@
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(45, 204);
+            this.labelControl5.Location = new System.Drawing.Point(12, 204);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(97, 28);
+            this.labelControl5.Size = new System.Drawing.Size(150, 28);
             this.labelControl5.TabIndex = 27;
-            this.labelControl5.Text = "Açıklama:";
+            this.labelControl5.Text = "Malzeme Cinsi:";
             // 
             // txtDescp
             // 
-            this.txtDescp.Location = new System.Drawing.Point(162, 203);
+            this.txtDescp.Location = new System.Drawing.Point(189, 203);
             this.txtDescp.Name = "txtDescp";
             this.txtDescp.Size = new System.Drawing.Size(277, 111);
-            this.txtDescp.TabIndex = 28;
+            this.txtDescp.TabIndex = 3;
             // 
             // tableLayoutPanel1
             // 
@@ -242,11 +242,11 @@
             this.tableLayoutPanel1.Controls.Add(this.btnCancel, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnDone, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 415);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 467);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(461, 126);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(486, 126);
             this.tableLayoutPanel1.TabIndex = 29;
             // 
             // btnCancel
@@ -257,8 +257,8 @@
             this.btnCancel.Margin = new System.Windows.Forms.Padding(10);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Padding = new System.Windows.Forms.Padding(25);
-            this.btnCancel.Size = new System.Drawing.Size(210, 106);
-            this.btnCancel.TabIndex = 4;
+            this.btnCancel.Size = new System.Drawing.Size(223, 106);
+            this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "İPTAL";
             this.btnCancel.CheckedChanged += new System.EventHandler(this.btnCancel_CheckedChanged);
             // 
@@ -266,12 +266,12 @@
             // 
             this.btnDone.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnDone.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDone.ImageOptions.SvgImage")));
-            this.btnDone.Location = new System.Drawing.Point(240, 10);
+            this.btnDone.Location = new System.Drawing.Point(253, 10);
             this.btnDone.Margin = new System.Windows.Forms.Padding(10);
             this.btnDone.Name = "btnDone";
             this.btnDone.Padding = new System.Windows.Forms.Padding(25);
-            this.btnDone.Size = new System.Drawing.Size(211, 106);
-            this.btnDone.TabIndex = 3;
+            this.btnDone.Size = new System.Drawing.Size(223, 106);
+            this.btnDone.TabIndex = 6;
             this.btnDone.Text = "TAMAM";
             this.btnDone.CheckedChanged += new System.EventHandler(this.btnDone_CheckedChanged);
             // 
@@ -295,7 +295,7 @@
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(23, 326);
+            this.labelControl6.Location = new System.Drawing.Point(43, 322);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(119, 28);
             this.labelControl6.TabIndex = 31;
@@ -313,7 +313,7 @@
             // lookupOffers
             // 
             this.lookupOffers.EditValue = "";
-            this.lookupOffers.Location = new System.Drawing.Point(162, 328);
+            this.lookupOffers.Location = new System.Drawing.Point(189, 328);
             this.lookupOffers.Name = "lookupOffers";
             this.lookupOffers.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -322,7 +322,7 @@
             this.lookupOffers.Properties.PopupView = this.gridView3;
             this.lookupOffers.Properties.ValueMember = "ID";
             this.lookupOffers.Size = new System.Drawing.Size(277, 22);
-            this.lookupOffers.TabIndex = 32;
+            this.lookupOffers.TabIndex = 4;
             // 
             // gridView3
             // 
@@ -404,7 +404,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(461, 541);
+            this.ClientSize = new System.Drawing.Size(486, 593);
             this.Controls.Add(this.lookupOffers);
             this.Controls.Add(this.labelControl6);
             this.Controls.Add(this.tableLayoutPanel1);

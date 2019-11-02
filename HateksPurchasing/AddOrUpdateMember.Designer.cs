@@ -53,7 +53,7 @@
             this.txtMail.Location = new System.Drawing.Point(114, 137);
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(327, 22);
-            this.txtMail.TabIndex = 29;
+            this.txtMail.TabIndex = 2;
             // 
             // labelControl3
             // 
@@ -99,7 +99,7 @@
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Padding = new System.Windows.Forms.Padding(25);
             this.btnCancel.Size = new System.Drawing.Size(215, 136);
-            this.btnCancel.TabIndex = 4;
+            this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "İPTAL";
             this.btnCancel.CheckedChanged += new System.EventHandler(this.btnCancel_CheckedChanged);
             // 
@@ -112,7 +112,7 @@
             this.btnDone.Name = "btnDone";
             this.btnDone.Padding = new System.Windows.Forms.Padding(25);
             this.btnDone.Size = new System.Drawing.Size(216, 136);
-            this.btnDone.TabIndex = 3;
+            this.btnDone.TabIndex = 4;
             this.btnDone.Text = "TAMAM";
             this.btnDone.CheckedChanged += new System.EventHandler(this.btnDone_CheckedChanged);
             // 
@@ -121,7 +121,7 @@
             this.txtName.Location = new System.Drawing.Point(114, 36);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(327, 22);
-            this.txtName.TabIndex = 24;
+            this.txtName.TabIndex = 0;
             // 
             // labelControl1
             // 
@@ -139,14 +139,14 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Properties.Mask.EditMask = "d";
             this.txtPassword.Size = new System.Drawing.Size(327, 22);
-            this.txtPassword.TabIndex = 27;
+            this.txtPassword.TabIndex = 3;
             // 
             // txtSurname
             // 
             this.txtSurname.Location = new System.Drawing.Point(114, 85);
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(327, 22);
-            this.txtSurname.TabIndex = 31;
+            this.txtSurname.TabIndex = 1;
             // 
             // labelControl4
             // 
