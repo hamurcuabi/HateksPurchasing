@@ -25,6 +25,8 @@ namespace HateksPurchasing
         {
             // TODO: This line of code loads data into the 'hateksPurchasingDataSet.ViewDraft' table. You can move, or remove it, as needed.
             this.viewDraftTableAdapter.Fill(this.hateksPurchasingDataSet.ViewDraft);
+            // TODO: This line of code loads data into the 'hateksPurchasingDataSet.ViewDraft' table. You can move, or remove it, as needed.
+            this.viewDraftTableAdapter.Fill(this.hateksPurchasingDataSet.ViewDraft);
 
         }
 

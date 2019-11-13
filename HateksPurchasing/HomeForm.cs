@@ -10,13 +10,11 @@ using System.Windows.Forms;
 using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
 using HateksPurchasing.Helper;
-using DevExpress.XtraEditors;
 
 namespace HateksPurchasing
 {
     public partial class HomeForm : RibbonForm
     {
-
 
         public HomeForm()
         {
@@ -166,7 +164,7 @@ namespace HateksPurchasing
             if (new Login().ShowDialog() == DialogResult.OK)
             {
                 bar.Caption = "Holgeldiniz " + SessionHelper.member.Name.ToUpper();
-                CreateMdiForm(new Drafts());
+                CreateMdiForm(new Items());
             }
 
 
@@ -202,7 +200,7 @@ namespace HateksPurchasing
 
         private void btnAddMember_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if (SessionHelper.member.Name.Equals("admin"))
+            if (SessionHelper.member.Name.ToLower() == "admin")
             {
                 bool isexist = false;
 
@@ -220,9 +218,30 @@ namespace HateksPurchasing
                     CreateMdiForm(new Members());
             }
             else {
-                XtraMessageBox.Show("Kullanıcı Ekleme Yetkiniz Yok", "Yetki Hatası", MessageBoxButtons.OK);
+
+                DevExpress.XtraEditors.XtraMessageBox.Show("Yetkiniz Bulunmuyor", "Uyarı", MessageBoxButtons.OK);
+
+
             }
-           
+        
+        }
+
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            bool isexist = false;
+
+            foreach (var form in this.xtraTabbedMdiManager1.MdiParent.MdiChildren)
+            {
+                if (form is Items)
+                {
+                    form.BringToFront();
+                    isexist = true;
+                    break;
+
+                }
+            }
+            if (!isexist)
+                CreateMdiForm(new Items());
         }
     }
 
