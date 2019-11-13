@@ -10,6 +10,7 @@ namespace HateksPurchasing.Helper
     {
         public static System.Drawing.Color ToColor( string color)
         {
+            color = color.Replace(";", ",");
             var arrColorFragments = color?.Split(',').Select(sFragment => { int.TryParse(sFragment, out int fragment); return fragment; }).ToArray();
 
             switch (arrColorFragments?.Length)

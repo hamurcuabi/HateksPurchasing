@@ -30,9 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Drafts));
-            this.viewDraftBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hateksPurchasingDataSet = new HateksPurchasing.HateksPurchasingDataSet();
-            this.viewDraftTableAdapter = new HateksPurchasing.HateksPurchasingDataSetTableAdapters.ViewDraftTableAdapter();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
@@ -70,27 +67,17 @@
             this.colTotalPrice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTotalPriceNumeric = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTotalPriceText = new DevExpress.XtraGrid.Columns.GridColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.viewDraftBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hateksPurchasingDataSet)).BeginInit();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.hateksPurchasingDataSet = new HateksPurchasing.HateksPurchasingDataSet();
+            this.viewDraftBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.viewDraftTableAdapter = new HateksPurchasing.HateksPurchasingDataSetTableAdapters.ViewDraftTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hateksPurchasingDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewDraftBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // viewDraftBindingSource
-            // 
-            this.viewDraftBindingSource.DataMember = "ViewDraft";
-            this.viewDraftBindingSource.DataSource = this.hateksPurchasingDataSet;
-            // 
-            // hateksPurchasingDataSet
-            // 
-            this.hateksPurchasingDataSet.DataSetName = "HateksPurchasingDataSet";
-            this.hateksPurchasingDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // viewDraftTableAdapter
-            // 
-            this.viewDraftTableAdapter.ClearBeforeFill = true;
             // 
             // tableLayoutPanel1
             // 
@@ -104,7 +91,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(660, 441);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(781, 528);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -119,11 +106,11 @@
             this.tableLayoutPanel2.Controls.Add(this.btnEdit, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnUpdate, 3, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 355);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 425);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(654, 83);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(775, 100);
             this.tableLayoutPanel2.TabIndex = 5;
             // 
             // btnAdd
@@ -133,10 +120,10 @@
             this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnAdd.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAdd.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAdd.ImageOptions.SvgImage")));
-            this.btnAdd.Location = new System.Drawing.Point(98, 3);
+            this.btnAdd.Location = new System.Drawing.Point(116, 3);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Padding = new System.Windows.Forms.Padding(20);
-            this.btnAdd.Size = new System.Drawing.Size(148, 77);
+            this.btnAdd.Size = new System.Drawing.Size(176, 94);
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Yeni Ekle";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -148,10 +135,10 @@
             this.btnEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnEdit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnEdit.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEdit.ImageOptions.SvgImage")));
-            this.btnEdit.Location = new System.Drawing.Point(252, 3);
+            this.btnEdit.Location = new System.Drawing.Point(298, 3);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Padding = new System.Windows.Forms.Padding(20);
-            this.btnEdit.Size = new System.Drawing.Size(148, 77);
+            this.btnEdit.Size = new System.Drawing.Size(176, 94);
             this.btnEdit.TabIndex = 1;
             this.btnEdit.Text = "Düzenle";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
@@ -163,10 +150,10 @@
             this.btnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnUpdate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnUpdate.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnUpdate.ImageOptions.SvgImage")));
-            this.btnUpdate.Location = new System.Drawing.Point(406, 3);
+            this.btnUpdate.Location = new System.Drawing.Point(480, 3);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Padding = new System.Windows.Forms.Padding(20);
-            this.btnUpdate.Size = new System.Drawing.Size(148, 77);
+            this.btnUpdate.Size = new System.Drawing.Size(176, 94);
             this.btnUpdate.TabIndex = 2;
             this.btnUpdate.Text = "Yenile";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -178,7 +165,7 @@
             this.gridControl1.Location = new System.Drawing.Point(3, 3);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(654, 346);
+            this.gridControl1.Size = new System.Drawing.Size(775, 416);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -216,7 +203,8 @@
             this.colGenerateDate,
             this.colTotalPrice,
             this.colTotalPriceNumeric,
-            this.colTotalPriceText});
+            this.colTotalPriceText,
+            this.gridColumn1});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.AllowGroupExpandAnimation = DevExpress.Utils.DefaultBoolean.True;
@@ -310,7 +298,7 @@
             this.colDescription.MinWidth = 25;
             this.colDescription.Name = "colDescription";
             this.colDescription.Visible = true;
-            this.colDescription.VisibleIndex = 5;
+            this.colDescription.VisibleIndex = 6;
             this.colDescription.Width = 94;
             // 
             // colSelectedOffering
@@ -335,7 +323,7 @@
             this.colOfferingName.MinWidth = 25;
             this.colOfferingName.Name = "colOfferingName";
             this.colOfferingName.Visible = true;
-            this.colOfferingName.VisibleIndex = 6;
+            this.colOfferingName.VisibleIndex = 7;
             this.colOfferingName.Width = 94;
             // 
             // colPrice
@@ -345,7 +333,7 @@
             this.colPrice.MinWidth = 25;
             this.colPrice.Name = "colPrice";
             this.colPrice.Visible = true;
-            this.colPrice.VisibleIndex = 7;
+            this.colPrice.VisibleIndex = 8;
             this.colPrice.Width = 94;
             // 
             // colCurrencyRate
@@ -355,7 +343,7 @@
             this.colCurrencyRate.MinWidth = 25;
             this.colCurrencyRate.Name = "colCurrencyRate";
             this.colCurrencyRate.Visible = true;
-            this.colCurrencyRate.VisibleIndex = 8;
+            this.colCurrencyRate.VisibleIndex = 9;
             this.colCurrencyRate.Width = 94;
             // 
             // colCurrencyName
@@ -365,7 +353,7 @@
             this.colCurrencyName.MinWidth = 25;
             this.colCurrencyName.Name = "colCurrencyName";
             this.colCurrencyName.Visible = true;
-            this.colCurrencyName.VisibleIndex = 9;
+            this.colCurrencyName.VisibleIndex = 10;
             this.colCurrencyName.Width = 94;
             // 
             // colShortCode
@@ -382,7 +370,7 @@
             this.colOfferingDescription.MinWidth = 25;
             this.colOfferingDescription.Name = "colOfferingDescription";
             this.colOfferingDescription.Visible = true;
-            this.colOfferingDescription.VisibleIndex = 10;
+            this.colOfferingDescription.VisibleIndex = 11;
             this.colOfferingDescription.Width = 94;
             // 
             // colOfferingDate
@@ -392,7 +380,7 @@
             this.colOfferingDate.MinWidth = 25;
             this.colOfferingDate.Name = "colOfferingDate";
             this.colOfferingDate.Visible = true;
-            this.colOfferingDate.VisibleIndex = 11;
+            this.colOfferingDate.VisibleIndex = 12;
             this.colOfferingDate.Width = 94;
             // 
             // colCompanyName
@@ -409,7 +397,7 @@
             this.colStateName.MinWidth = 25;
             this.colStateName.Name = "colStateName";
             this.colStateName.Visible = true;
-            this.colStateName.VisibleIndex = 12;
+            this.colStateName.VisibleIndex = 13;
             this.colStateName.Width = 94;
             // 
             // colColor
@@ -469,7 +457,7 @@
             this.colTotalPrice.MinWidth = 25;
             this.colTotalPrice.Name = "colTotalPrice";
             this.colTotalPrice.Visible = true;
-            this.colTotalPrice.VisibleIndex = 13;
+            this.colTotalPrice.VisibleIndex = 14;
             this.colTotalPrice.Width = 94;
             // 
             // colTotalPriceNumeric
@@ -478,7 +466,7 @@
             this.colTotalPriceNumeric.MinWidth = 25;
             this.colTotalPriceNumeric.Name = "colTotalPriceNumeric";
             this.colTotalPriceNumeric.Visible = true;
-            this.colTotalPriceNumeric.VisibleIndex = 14;
+            this.colTotalPriceNumeric.VisibleIndex = 15;
             this.colTotalPriceNumeric.Width = 94;
             // 
             // colTotalPriceText
@@ -488,32 +476,53 @@
             this.colTotalPriceText.MinWidth = 25;
             this.colTotalPriceText.Name = "colTotalPriceText";
             this.colTotalPriceText.Visible = true;
-            this.colTotalPriceText.VisibleIndex = 15;
+            this.colTotalPriceText.VisibleIndex = 16;
             this.colTotalPriceText.Width = 94;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Malzeme Cinsi";
+            this.gridColumn1.FieldName = "ItemName";
+            this.gridColumn1.MinWidth = 25;
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 5;
+            this.gridColumn1.Width = 94;
+            // 
+            // hateksPurchasingDataSet
+            // 
+            this.hateksPurchasingDataSet.DataSetName = "HateksPurchasingDataSet";
+            this.hateksPurchasingDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // viewDraftBindingSource
+            // 
+            this.viewDraftBindingSource.DataMember = "ViewDraft";
+            this.viewDraftBindingSource.DataSource = this.hateksPurchasingDataSet;
+            // 
+            // viewDraftTableAdapter
+            // 
+            this.viewDraftTableAdapter.ClearBeforeFill = true;
             // 
             // Drafts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(528, 353);
+            this.ClientSize = new System.Drawing.Size(781, 528);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Drafts";
             this.Text = "Satın Alma";
             this.Load += new System.EventHandler(this.Drafts_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.viewDraftBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hateksPurchasingDataSet)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hateksPurchasingDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewDraftBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private HateksPurchasingDataSet hateksPurchasingDataSet;
-        private System.Windows.Forms.BindingSource viewDraftBindingSource;
-        private HateksPurchasingDataSetTableAdapters.ViewDraftTableAdapter viewDraftTableAdapter;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
@@ -551,5 +560,9 @@
         private DevExpress.XtraEditors.SimpleButton btnAdd;
         private DevExpress.XtraEditors.SimpleButton btnEdit;
         private DevExpress.XtraEditors.SimpleButton btnUpdate;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private HateksPurchasingDataSet hateksPurchasingDataSet;
+        private System.Windows.Forms.BindingSource viewDraftBindingSource;
+        private HateksPurchasingDataSetTableAdapters.ViewDraftTableAdapter viewDraftTableAdapter;
     }
 }

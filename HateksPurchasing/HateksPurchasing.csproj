@@ -54,7 +54,7 @@
     <ApplicationIcon>cart.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>920240BA03ED52ECE7FED77F1D12F23DB4A13954</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>1AB28913E61317B98879EA1FF8404F6777E4E463</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>HateksPurchasing_TemporaryKey.pfx</ManifestKeyFile>
@@ -306,6 +306,7 @@
     <None Include="HateksPurchasingDataSet.xss">
       <DependentUpon>HateksPurchasingDataSet.xsd</DependentUpon>
     </None>
+    <None Include="HateksPurchasing_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

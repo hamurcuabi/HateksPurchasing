@@ -15,12 +15,14 @@ namespace HateksPurchasing
 {
     public partial class AddDraftDialog : DevExpress.XtraEditors.XtraForm
     {
-        private bool isNew = true;
-        private DraftRow row;
         public AddDraftDialog()
         {
             InitializeComponent();
         }
+
+        private bool isNew = true;
+        private DraftRow row;
+
         public AddDraftDialog(int id)
         {
             InitializeComponent();
@@ -28,6 +30,10 @@ namespace HateksPurchasing
             lookupDraftType.EditValue = row.DraftTypeId;
             lookupState.EditValue = row.StateId;
             lookupUnit.EditValue = row.UnitId;
+            lookUpItem.EditValue = row.ItemId;
+
+            lookupDraftType.Enabled = false;
+            lookUpItem.Enabled = false;
             try
             {
                 lookupOffers.EditValue = row.SelectedOffering;
@@ -45,31 +51,17 @@ namespace HateksPurchasing
 
         private void FillOffers(int id)
         {
-            this.viewOfferingTableAdapter.Fill(this.hateksPurchasingDataSet.ViewOffering);
-            DataTable dt = this.hateksPurchasingDataSet.ViewOffering;
-            DataRow[] dr = dt.Select("DraftId= " + id);
+       this.viewOfferingTableAdapter.FillByDraftId(this.hateksPurchasingDataSet.ViewOffering, id);
 
-            lookupOffers.Properties.View.BestFitColumns();
-            lookupOffers.Properties.DisplayMember = "Name";
-            lookupOffers.Properties.ValueMember = "ID";
-            lookupOffers.Properties.DataSource = dr;
 
         }
 
         private void AddDraftDialog_Load(object sender, EventArgs e)
         {
-
-            // TODO: This line of code loads data into the 'hateksPurchasingDataSet.State' table. You can move, or remove it, as needed.
+            this.itemsTableAdapter.Fill(this.hateksPurchasingDataSet.Items);
             this.stateTableAdapter.Fill(this.hateksPurchasingDataSet.State);
-            // TODO: This line of code loads data into the 'hateksPurchasingDataSet.Unit' table. You can move, or remove it, as needed.
             this.unitTableAdapter.Fill(this.hateksPurchasingDataSet.Unit);
-            // TODO: This line of code loads data into the 'hateksPurchasingDataSet.DraftType' table. You can move, or remove it, as needed.
             this.draftTypeTableAdapter.Fill(this.hateksPurchasingDataSet.DraftType);
-
-
-
-
-
 
 
         }
@@ -80,7 +72,11 @@ namespace HateksPurchasing
             {
                 if (isNew)
                 {
-                    draftTableAdapter1.Insert(Int32.Parse(lookupDraftType.EditValue.ToString()), Int32.Parse(lookupUnit.EditValue.ToString()), SessionHelper.member.ID, double.Parse(txtAmount.Text), txtDescp.Text, null, null, null, null, DateTime.Now, Int32.Parse(lookupState.EditValue.ToString()), null);
+                    int draftType = Int32.Parse(lookupDraftType.EditValue.ToString());
+                    int unitId = Int32.Parse(lookupUnit.EditValue.ToString());
+                    int itemId = Int32.Parse(lookUpItem.EditValue.ToString());
+                    draftTableAdapter1.Insert(draftType, unitId, itemId, SessionHelper.member.ID,
+double.Parse(txtAmount.Text), txtDescp.Text, null, null, null, null, DateTime.Now, Int32.Parse(lookupState.EditValue.ToString()), null);
 
 
                 }
@@ -89,10 +85,14 @@ namespace HateksPurchasing
                     row.DraftTypeId = Int32.Parse(lookupDraftType.EditValue.ToString());
                     row.StateId = Int32.Parse(lookupState.EditValue.ToString());
                     row.UnitId = Int32.Parse(lookupUnit.EditValue.ToString());
-                    if (!String.IsNullOrEmpty(lookupOffers.EditValue.ToString()))
+                    if (lookupOffers.EditValue != null)
                     {
-                        row.SelectedOffering = Int32.Parse(lookupOffers.EditValue.ToString());
+                        if (!String.IsNullOrEmpty(lookupOffers.EditValue.ToString()))
+                        {
+                            row.SelectedOffering = Int32.Parse(lookupOffers.EditValue.ToString());
+                        }
                     }
+                 
 
                     row.Amount = double.Parse(txtAmount.Text);
                     row.Description = txtDescp.Text;
@@ -133,6 +133,11 @@ namespace HateksPurchasing
                 lookupState.ErrorText = "Seçim Yapınız";
                 return false;
             }
+            else if (lookUpItem.GetSelectedDataRow() == null)
+            {
+                lookupState.ErrorText = "Seçim Yapınız";
+                return false;
+            }
 
             return true;
         }
@@ -141,6 +146,22 @@ namespace HateksPurchasing
         {
             DialogResult = DialogResult.Cancel;
             Close();
+        }
+
+        private void AddDraftDialog_Load_1(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'hateksPurchasingDataSet.ViewDraft' table. You can move, or remove it, as needed.
+            this.viewDraftTableAdapter.Fill(this.hateksPurchasingDataSet.ViewDraft);
+            // TODO: This line of code loads data into the 'hateksPurchasingDataSet.ViewOffering' table. You can move, or remove it, as needed.
+         
+            this.stateTableAdapter.Fill(this.hateksPurchasingDataSet.State);
+            // TODO: This line of code loads data into the 'hateksPurchasingDataSet.ViewOffering' table. You can move, or remove it, as needed.
+            this.unitTableAdapter.Fill(this.hateksPurchasingDataSet.Unit);
+            // TODO: This line of code loads data into the 'hateksPurchasingDataSet.Items' table. You can move, or remove it, as needed.
+            this.itemsTableAdapter.Fill(this.hateksPurchasingDataSet.Items);
+            // TODO: This line of code loads data into the 'hateksPurchasingDataSet.DraftType' table. You can move, or remove it, as needed.
+            this.draftTypeTableAdapter.Fill(this.hateksPurchasingDataSet.DraftType);
+
         }
     }
 }

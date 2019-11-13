@@ -50,11 +50,11 @@
             this.tableLayoutPanel1.Controls.Add(this.btnCancel, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnDone, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 110);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 165);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(437, 156);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(437, 96);
             this.tableLayoutPanel1.TabIndex = 13;
             // 
             // btnCancel
@@ -65,7 +65,7 @@
             this.btnCancel.Margin = new System.Windows.Forms.Padding(10);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Padding = new System.Windows.Forms.Padding(25);
-            this.btnCancel.Size = new System.Drawing.Size(198, 136);
+            this.btnCancel.Size = new System.Drawing.Size(198, 76);
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "İPTAL";
             this.btnCancel.CheckedChanged += new System.EventHandler(this.btnCancel_CheckedChanged);
@@ -78,7 +78,7 @@
             this.btnDone.Margin = new System.Windows.Forms.Padding(10);
             this.btnDone.Name = "btnDone";
             this.btnDone.Padding = new System.Windows.Forms.Padding(25);
-            this.btnDone.Size = new System.Drawing.Size(199, 136);
+            this.btnDone.Size = new System.Drawing.Size(199, 76);
             this.btnDone.TabIndex = 3;
             this.btnDone.Text = "TAMAM";
             this.btnDone.CheckedChanged += new System.EventHandler(this.btnDone_CheckedChanged);
@@ -126,7 +126,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(437, 266);
+            this.ClientSize = new System.Drawing.Size(437, 261);
             this.Controls.Add(this.txtShortCode);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.tableLayoutPanel1);

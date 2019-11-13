@@ -201,20 +201,30 @@ namespace HateksPurchasing
 
         private void btnAddMember_ItemClick(object sender, ItemClickEventArgs e)
         {
-            bool isexist = false;
-
-            foreach (var form in this.xtraTabbedMdiManager1.MdiParent.MdiChildren)
+            if (SessionHelper.member.Name.ToLower() == "admin")
             {
-                if (form is Members)
-                {
-                    form.BringToFront();
-                    isexist = true;
-                    break;
+                bool isexist = false;
 
+                foreach (var form in this.xtraTabbedMdiManager1.MdiParent.MdiChildren)
+                {
+                    if (form is Members)
+                    {
+                        form.BringToFront();
+                        isexist = true;
+                        break;
+
+                    }
                 }
+                if (!isexist)
+                    CreateMdiForm(new Members());
             }
-            if (!isexist)
-                CreateMdiForm(new Members());
+            else {
+
+                DevExpress.XtraEditors.XtraMessageBox.Show("Yetkiniz Bulunmuyor", "Uyarı", MessageBoxButtons.OK);
+
+
+            }
+        
         }
     }
 
