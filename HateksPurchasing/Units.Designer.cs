@@ -205,7 +205,7 @@
             this.ClientSize = new System.Drawing.Size(518, 444);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Units";
-            this.Text = "Units";
+            this.Text = "Birimler";
             this.Load += new System.EventHandler(this.Units_Load);
             ((System.ComponentModel.ISupportInitialize)(this.unitBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hateksPurchasingDataSet)).EndInit();
