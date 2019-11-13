@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
 using HateksPurchasing.Helper;
+using DevExpress.XtraEditors;
 
 namespace HateksPurchasing
 {
@@ -201,20 +202,27 @@ namespace HateksPurchasing
 
         private void btnAddMember_ItemClick(object sender, ItemClickEventArgs e)
         {
-            bool isexist = false;
-
-            foreach (var form in this.xtraTabbedMdiManager1.MdiParent.MdiChildren)
+            if (SessionHelper.member.Name.Equals("admin"))
             {
-                if (form is Members)
-                {
-                    form.BringToFront();
-                    isexist = true;
-                    break;
+                bool isexist = false;
 
+                foreach (var form in this.xtraTabbedMdiManager1.MdiParent.MdiChildren)
+                {
+                    if (form is Members)
+                    {
+                        form.BringToFront();
+                        isexist = true;
+                        break;
+
+                    }
                 }
+                if (!isexist)
+                    CreateMdiForm(new Members());
             }
-            if (!isexist)
-                CreateMdiForm(new Members());
+            else {
+                XtraMessageBox.Show("Kullanıcı Ekleme Yetkiniz Yok", "Yetki Hatası", MessageBoxButtons.OK);
+            }
+           
         }
     }
 
