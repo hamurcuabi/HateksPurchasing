@@ -230,8 +230,17 @@ namespace HateksPurchasing
 
                     }
                 }
-                if (!isexist)
-                    CreateMdiForm(new Members());
+                if (!isexist) {
+                    if (!isexist)
+                    {
+                        Members form = new Members();
+                        form.MdiParent = this;
+                        form.Show();
+                        form.BringToFront();
+                    }
+                }
+               
+                    
             }
             else {
 
