@@ -27,7 +27,11 @@ namespace HateksPurchasing
             this.viewDraftTableAdapter.Fill(this.hateksPurchasingDataSet.ViewDraft);
             // TODO: This line of code loads data into the 'hateksPurchasingDataSet.ViewDraft' table. You can move, or remove it, as needed.
             this.viewDraftTableAdapter.Fill(this.hateksPurchasingDataSet.ViewDraft);
-
+            if (SessionHelper.member.FormPermId == 777)
+            {
+                btnAdd.Enabled = false;
+                btnEdit.Enabled = false;
+            }
         }
 
         private void gridView1_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)

@@ -54,7 +54,13 @@ namespace HateksPurchasing
                 }
             }
             if (!isexist)
-                CreateMdiForm(new Drafts());
+            {
+                Drafts form = new Drafts();
+                form.MdiParent = this;
+                form.Show();
+                form.BringToFront();
+            }
+                
         }
 
         private void btnCompanies_ItemClick(object sender, ItemClickEventArgs e)
@@ -77,10 +83,17 @@ namespace HateksPurchasing
 
         private void CreateMdiForm(DevExpress.XtraEditors.XtraForm form)
         {
+            if (SessionHelper.member.FormPermId == 888)
+            {
+                form.MdiParent = this;
+                form.Show();
+                form.BringToFront();
+            }
+            else
+            {
+                DevExpress.XtraEditors.XtraMessageBox.Show("Yetkiniz Bulunmuyor", "Uyarı", MessageBoxButtons.OK);
 
-            form.MdiParent = this;
-            form.Show();
-            form.BringToFront();
+            }
 
         }
 
@@ -164,7 +177,10 @@ namespace HateksPurchasing
             if (new Login().ShowDialog() == DialogResult.OK)
             {
                 bar.Caption = "Holgeldiniz " + SessionHelper.member.Name.ToUpper();
-                CreateMdiForm(new Items());
+                Drafts form=new Drafts();
+                form.MdiParent = this;
+                form.Show();
+                form.BringToFront();
             }
 
 
@@ -200,7 +216,7 @@ namespace HateksPurchasing
 
         private void btnAddMember_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if (SessionHelper.member.Name.ToLower() == "admin")
+            if (SessionHelper.member.FormPermId==999)
             {
                 bool isexist = false;
 
