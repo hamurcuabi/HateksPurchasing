@@ -26,7 +26,7 @@ namespace HateksPurchasing
             if (Validate())
             {
                 this.memberTableAdapter1.Fill(this.hateksPurchasingDataSet1.Member);
-                object dt = this.hateksPurchasingDataSet1.Member.SingleOrDefault(p => p.Name.ToLower() == txtUsername.Text.ToLower() && p.Password.ToLower() == txtPass.Text.ToLower());
+                object dt = this.hateksPurchasingDataSet1.Member.SingleOrDefault(p => p.UserName.ToLower() == txtUsername.Text.ToLower() && p.Password.ToLower() == txtPass.Text.ToLower());
 
 
                 if (dt == null)

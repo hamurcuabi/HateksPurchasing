@@ -30,6 +30,8 @@ namespace HateksPurchasing
             txtMail.Text = row.Email;
             txtPassword.Text = row.Password;
             txtSurname.Text = row.Surname;
+            txtUsername.Text = row.UserName;
+            lookupPerm.EditValue = row.FormPermId;
             isNew = false;
         }
         private bool Validate()
@@ -55,6 +57,11 @@ namespace HateksPurchasing
                 txtPassword.ErrorText = "Boş Bırakılamaz";
                 return false;
             }
+            else if (lookupPerm.GetSelectedDataRow() == null)
+            {
+                lookupPerm.ErrorText = "Seçim Yapınız";
+                return false;
+            }
 
             return true;
 
@@ -67,10 +74,12 @@ namespace HateksPurchasing
                 DialogResult = DialogResult.OK;
                 if (isNew)
                 {
-                    memberTableAdapter1.Insert(txtName.Text, txtSurname.Text, txtMail.Text, txtPassword.Text, false, DateTime.Now);
+                    memberTableAdapter1.Insert(Int32.Parse(lookupPerm.EditValue.ToString()), txtName.Text, txtSurname.Text, txtUsername.Text, txtMail.Text, txtPassword.Text, false, DateTime.Now);
                 }
                 else
                 {
+                    row.UserName = txtSurname.Text;
+                    row.FormPermId = Int32.Parse(lookupPerm.EditValue.ToString());
                     row.Name = txtName.Text;
                     row.Surname = txtSurname.Text;
                     row.Password = txtPassword.Text;
@@ -88,6 +97,13 @@ namespace HateksPurchasing
         {
             DialogResult = DialogResult.Cancel;
             Close();
+        }
+
+        private void AddOrUpdateMember_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'hateksPurchasingDataSet.FormPerms' table. You can move, or remove it, as needed.
+            this.formPermsTableAdapter.Fill(this.hateksPurchasingDataSet.FormPerms);
+
         }
     }
 }
