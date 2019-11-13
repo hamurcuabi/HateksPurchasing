@@ -36,6 +36,8 @@
             this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
             this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.viewDraftBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hateksPurchasingDataSet = new HateksPurchasing.HateksPurchasingDataSet();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDraftId = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -68,15 +70,13 @@
             this.colTotalPriceNumeric = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTotalPriceText = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.hateksPurchasingDataSet = new HateksPurchasing.HateksPurchasingDataSet();
-            this.viewDraftBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.viewDraftTableAdapter = new HateksPurchasing.HateksPurchasingDataSetTableAdapters.ViewDraftTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hateksPurchasingDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewDraftBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hateksPurchasingDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -170,6 +170,16 @@
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             this.gridControl1.Click += new System.EventHandler(this.gridControl1_Click);
+            // 
+            // viewDraftBindingSource
+            // 
+            this.viewDraftBindingSource.DataMember = "ViewDraft";
+            this.viewDraftBindingSource.DataSource = this.hateksPurchasingDataSet;
+            // 
+            // hateksPurchasingDataSet
+            // 
+            this.hateksPurchasingDataSet.DataSetName = "HateksPurchasingDataSet";
+            this.hateksPurchasingDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gridView1
             // 
@@ -489,16 +499,6 @@
             this.gridColumn1.VisibleIndex = 5;
             this.gridColumn1.Width = 94;
             // 
-            // hateksPurchasingDataSet
-            // 
-            this.hateksPurchasingDataSet.DataSetName = "HateksPurchasingDataSet";
-            this.hateksPurchasingDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // viewDraftBindingSource
-            // 
-            this.viewDraftBindingSource.DataMember = "ViewDraft";
-            this.viewDraftBindingSource.DataSource = this.hateksPurchasingDataSet;
-            // 
             // viewDraftTableAdapter
             // 
             this.viewDraftTableAdapter.ClearBeforeFill = true;
@@ -515,9 +515,9 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hateksPurchasingDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewDraftBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hateksPurchasingDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
         }

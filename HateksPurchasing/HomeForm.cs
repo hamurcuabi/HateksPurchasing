@@ -16,7 +16,6 @@ namespace HateksPurchasing
     public partial class HomeForm : RibbonForm
     {
 
-
         public HomeForm()
         {
             InitializeComponent();
@@ -165,7 +164,7 @@ namespace HateksPurchasing
             if (new Login().ShowDialog() == DialogResult.OK)
             {
                 bar.Caption = "Holgeldiniz " + SessionHelper.member.Name.ToUpper();
-                CreateMdiForm(new Drafts());
+                CreateMdiForm(new Items());
             }
 
 
@@ -225,6 +224,24 @@ namespace HateksPurchasing
 
             }
         
+        }
+
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            bool isexist = false;
+
+            foreach (var form in this.xtraTabbedMdiManager1.MdiParent.MdiChildren)
+            {
+                if (form is Items)
+                {
+                    form.BringToFront();
+                    isexist = true;
+                    break;
+
+                }
+            }
+            if (!isexist)
+                CreateMdiForm(new Items());
         }
     }
 
