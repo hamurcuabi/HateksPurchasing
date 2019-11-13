@@ -31,23 +31,23 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Items));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.hateksPurchasingDataSet = new HateksPurchasing.HateksPurchasingDataSet();
-            this.itemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.itemsTableAdapter = new HateksPurchasing.HateksPurchasingDataSetTableAdapters.ItemsTableAdapter();
-            this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
             this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.itemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hateksPurchasingDataSet = new HateksPurchasing.HateksPurchasingDataSet();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.itemsTableAdapter = new HateksPurchasing.HateksPurchasingDataSetTableAdapters.ItemsTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hateksPurchasingDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hateksPurchasingDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -64,61 +64,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(596, 449);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // gridControl1
-            // 
-            this.gridControl1.DataSource = this.itemsBindingSource;
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(3, 3);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(590, 353);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            // 
-            // gridView1
-            // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colId,
-            this.colName});
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsBehavior.ReadOnly = true;
-            this.gridView1.OptionsFind.AlwaysVisible = true;
-            this.gridView1.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gridView1_RowCellStyle);
-            this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
-            // 
-            // hateksPurchasingDataSet
-            // 
-            this.hateksPurchasingDataSet.DataSetName = "HateksPurchasingDataSet";
-            this.hateksPurchasingDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // itemsBindingSource
-            // 
-            this.itemsBindingSource.DataMember = "Items";
-            this.itemsBindingSource.DataSource = this.hateksPurchasingDataSet;
-            // 
-            // itemsTableAdapter
-            // 
-            this.itemsTableAdapter.ClearBeforeFill = true;
-            // 
-            // colId
-            // 
-            this.colId.FieldName = "Id";
-            this.colId.MinWidth = 25;
-            this.colId.Name = "colId";
-            this.colId.Width = 94;
-            // 
-            // colName
-            // 
-            this.colName.Caption = "Malzeme Cinsi";
-            this.colName.FieldName = "Name";
-            this.colName.MinWidth = 25;
-            this.colName.Name = "colName";
-            this.colName.Visible = true;
-            this.colName.VisibleIndex = 0;
-            this.colName.Width = 94;
             // 
             // tableLayoutPanel2
             // 
@@ -184,6 +129,61 @@
             this.btnUpdate.Text = "Yenile";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
+            // gridControl1
+            // 
+            this.gridControl1.DataSource = this.itemsBindingSource;
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.Location = new System.Drawing.Point(3, 3);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(590, 353);
+            this.gridControl1.TabIndex = 0;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // itemsBindingSource
+            // 
+            this.itemsBindingSource.DataMember = "Items";
+            this.itemsBindingSource.DataSource = this.hateksPurchasingDataSet;
+            // 
+            // hateksPurchasingDataSet
+            // 
+            this.hateksPurchasingDataSet.DataSetName = "HateksPurchasingDataSet";
+            this.hateksPurchasingDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // gridView1
+            // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colId,
+            this.colName});
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.ReadOnly = true;
+            this.gridView1.OptionsFind.AlwaysVisible = true;
+            this.gridView1.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gridView1_RowCellStyle);
+            this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
+            // 
+            // colId
+            // 
+            this.colId.FieldName = "Id";
+            this.colId.MinWidth = 25;
+            this.colId.Name = "colId";
+            this.colId.Width = 94;
+            // 
+            // colName
+            // 
+            this.colName.Caption = "Malzeme Cinsi";
+            this.colName.FieldName = "Name";
+            this.colName.MinWidth = 25;
+            this.colName.Name = "colName";
+            this.colName.Visible = true;
+            this.colName.VisibleIndex = 0;
+            this.colName.Width = 94;
+            // 
+            // itemsTableAdapter
+            // 
+            this.itemsTableAdapter.ClearBeforeFill = true;
+            // 
             // Items
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -191,14 +191,14 @@
             this.ClientSize = new System.Drawing.Size(596, 449);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Items";
-            this.Text = "Items";
+            this.Text = "Malzemeler";
             this.Load += new System.EventHandler(this.Items_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hateksPurchasingDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hateksPurchasingDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -31,15 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Members));
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
-            this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
+            this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
+            this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.hateksPurchasingDataSet = new HateksPurchasing.HateksPurchasingDataSet();
             this.memberBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.memberTableAdapter = new HateksPurchasing.HateksPurchasingDataSetTableAdapters.MemberTableAdapter();
+            this.hateksPurchasingDataSet = new HateksPurchasing.HateksPurchasingDataSet();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSurname = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -47,12 +46,13 @@
             this.colPassword = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIsLogin = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.memberTableAdapter = new HateksPurchasing.HateksPurchasingDataSetTableAdapters.MemberTableAdapter();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hateksPurchasingDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hateksPurchasingDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -74,20 +74,20 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(445, 75);
             this.tableLayoutPanel2.TabIndex = 5;
             // 
-            // btnUpdate
+            // btnAdd
             // 
-            this.btnUpdate.Appearance.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Appearance.Options.UseFont = true;
-            this.btnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnUpdate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnUpdate.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnUpdate.ImageOptions.SvgImage")));
-            this.btnUpdate.Location = new System.Drawing.Point(276, 3);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Padding = new System.Windows.Forms.Padding(20);
-            this.btnUpdate.Size = new System.Drawing.Size(98, 69);
-            this.btnUpdate.TabIndex = 2;
-            this.btnUpdate.Text = "Yenile";
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            this.btnAdd.Appearance.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Appearance.Options.UseFont = true;
+            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnAdd.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAdd.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAdd.ImageOptions.SvgImage")));
+            this.btnAdd.Location = new System.Drawing.Point(68, 3);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Padding = new System.Windows.Forms.Padding(20);
+            this.btnAdd.Size = new System.Drawing.Size(98, 69);
+            this.btnAdd.TabIndex = 0;
+            this.btnAdd.Text = "Yeni Ekle";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnEdit
             // 
@@ -104,20 +104,20 @@
             this.btnEdit.Text = "Düzenle";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // btnAdd
+            // btnUpdate
             // 
-            this.btnAdd.Appearance.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Appearance.Options.UseFont = true;
-            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnAdd.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAdd.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAdd.ImageOptions.SvgImage")));
-            this.btnAdd.Location = new System.Drawing.Point(68, 3);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Padding = new System.Windows.Forms.Padding(20);
-            this.btnAdd.Size = new System.Drawing.Size(98, 69);
-            this.btnAdd.TabIndex = 0;
-            this.btnAdd.Text = "Yeni Ekle";
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnUpdate.Appearance.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Appearance.Options.UseFont = true;
+            this.btnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnUpdate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnUpdate.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnUpdate.ImageOptions.SvgImage")));
+            this.btnUpdate.Location = new System.Drawing.Point(276, 3);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Padding = new System.Windows.Forms.Padding(20);
+            this.btnUpdate.Size = new System.Drawing.Size(98, 69);
+            this.btnUpdate.TabIndex = 2;
+            this.btnUpdate.Text = "Yenile";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -146,6 +146,16 @@
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
+            // memberBindingSource
+            // 
+            this.memberBindingSource.DataMember = "Member";
+            this.memberBindingSource.DataSource = this.hateksPurchasingDataSet;
+            // 
+            // hateksPurchasingDataSet
+            // 
+            this.hateksPurchasingDataSet.DataSetName = "HateksPurchasingDataSet";
+            this.hateksPurchasingDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
@@ -161,20 +171,6 @@
             this.gridView1.OptionsView.ShowFooter = true;
             this.gridView1.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gridView1_RowCellStyle);
             this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
-            // 
-            // hateksPurchasingDataSet
-            // 
-            this.hateksPurchasingDataSet.DataSetName = "HateksPurchasingDataSet";
-            this.hateksPurchasingDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // memberBindingSource
-            // 
-            this.memberBindingSource.DataMember = "Member";
-            this.memberBindingSource.DataSource = this.hateksPurchasingDataSet;
-            // 
-            // memberTableAdapter
-            // 
-            this.memberTableAdapter.ClearBeforeFill = true;
             // 
             // colID
             // 
@@ -240,6 +236,10 @@
             this.colDate.VisibleIndex = 4;
             this.colDate.Width = 94;
             // 
+            // memberTableAdapter
+            // 
+            this.memberTableAdapter.ClearBeforeFill = true;
+            // 
             // Members
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -247,14 +247,14 @@
             this.ClientSize = new System.Drawing.Size(451, 404);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Members";
-            this.Text = "Members";
+            this.Text = "Kullanıcılar";
             this.Load += new System.EventHandler(this.Members_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hateksPurchasingDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hateksPurchasingDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
         }

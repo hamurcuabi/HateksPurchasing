@@ -230,7 +230,7 @@
             this.ClientSize = new System.Drawing.Size(852, 437);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "States";
-            this.Text = "States";
+            this.Text = "Durumlar";
             this.Load += new System.EventHandler(this.States_Load);
             ((System.ComponentModel.ISupportInitialize)(this.stateBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hateksPurchasingDataSet)).EndInit();
