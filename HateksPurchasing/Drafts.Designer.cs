@@ -524,7 +524,7 @@
             this.btnExport.Padding = new System.Windows.Forms.Padding(20);
             this.btnExport.Size = new System.Drawing.Size(141, 94);
             this.btnExport.TabIndex = 3;
-            this.btnExport.Text = "Aktarma";
+            this.btnExport.Text = "Excell/Pdf";
             this.btnExport.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // Drafts
