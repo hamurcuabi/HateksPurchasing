@@ -71,6 +71,7 @@
             this.colTotalPriceText = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.viewDraftTableAdapter = new HateksPurchasing.HateksPurchasingDataSetTableAdapters.ViewDraftTableAdapter();
+            this.btnExport = new DevExpress.XtraEditors.SimpleButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -96,15 +97,17 @@
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.ColumnCount = 5;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.62264F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.5849F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.5849F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.5849F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.62264F));
+            this.tableLayoutPanel2.ColumnCount = 6;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.83253F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.08473F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.08473F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.08076F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.08473F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.83253F));
             this.tableLayoutPanel2.Controls.Add(this.btnAdd, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnEdit, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnUpdate, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnExport, 4, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 425);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -120,10 +123,10 @@
             this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnAdd.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAdd.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAdd.ImageOptions.SvgImage")));
-            this.btnAdd.Location = new System.Drawing.Point(116, 3);
+            this.btnAdd.Location = new System.Drawing.Point(94, 3);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Padding = new System.Windows.Forms.Padding(20);
-            this.btnAdd.Size = new System.Drawing.Size(176, 94);
+            this.btnAdd.Size = new System.Drawing.Size(141, 94);
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Yeni Ekle";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -135,10 +138,10 @@
             this.btnEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnEdit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnEdit.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEdit.ImageOptions.SvgImage")));
-            this.btnEdit.Location = new System.Drawing.Point(298, 3);
+            this.btnEdit.Location = new System.Drawing.Point(241, 3);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Padding = new System.Windows.Forms.Padding(20);
-            this.btnEdit.Size = new System.Drawing.Size(176, 94);
+            this.btnEdit.Size = new System.Drawing.Size(141, 94);
             this.btnEdit.TabIndex = 1;
             this.btnEdit.Text = "Düzenle";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
@@ -150,10 +153,10 @@
             this.btnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnUpdate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnUpdate.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnUpdate.ImageOptions.SvgImage")));
-            this.btnUpdate.Location = new System.Drawing.Point(480, 3);
+            this.btnUpdate.Location = new System.Drawing.Point(388, 3);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Padding = new System.Windows.Forms.Padding(20);
-            this.btnUpdate.Size = new System.Drawing.Size(176, 94);
+            this.btnUpdate.Size = new System.Drawing.Size(141, 94);
             this.btnUpdate.TabIndex = 2;
             this.btnUpdate.Text = "Yenile";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -221,6 +224,12 @@
             this.gridView1.OptionsBehavior.AllowSortAnimation = DevExpress.Utils.DefaultBoolean.True;
             this.gridView1.OptionsBehavior.ReadOnly = true;
             this.gridView1.OptionsFind.AlwaysVisible = true;
+            this.gridView1.OptionsPrint.AllowMultilineHeaders = true;
+            this.gridView1.OptionsPrint.EnableAppearanceEvenRow = true;
+            this.gridView1.OptionsPrint.EnableAppearanceOddRow = true;
+            this.gridView1.OptionsPrint.ExpandAllDetails = true;
+            this.gridView1.OptionsPrint.PrintDetails = true;
+            this.gridView1.OptionsPrint.PrintSelectedRowsOnly = true;
             this.gridView1.OptionsView.ShowFooter = true;
             this.gridView1.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gridView1_RowCellStyle);
             this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
@@ -503,6 +512,21 @@
             // 
             this.viewDraftTableAdapter.ClearBeforeFill = true;
             // 
+            // btnExport
+            // 
+            this.btnExport.Appearance.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExport.Appearance.Options.UseFont = true;
+            this.btnExport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnExport.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnExport.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
+            this.btnExport.Location = new System.Drawing.Point(535, 3);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Padding = new System.Windows.Forms.Padding(20);
+            this.btnExport.Size = new System.Drawing.Size(141, 94);
+            this.btnExport.TabIndex = 3;
+            this.btnExport.Text = "Excell/Pdf";
+            this.btnExport.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
             // Drafts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -564,5 +588,6 @@
         private HateksPurchasingDataSet hateksPurchasingDataSet;
         private System.Windows.Forms.BindingSource viewDraftBindingSource;
         private HateksPurchasingDataSetTableAdapters.ViewDraftTableAdapter viewDraftTableAdapter;
+        private DevExpress.XtraEditors.SimpleButton btnExport;
     }
 }

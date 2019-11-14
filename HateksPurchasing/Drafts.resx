@@ -176,6 +176,29 @@
         IC8+DQo8L3N2Zz4L
 </value>
   </data>
+  <data name="simpleButton1.ImageOptions.SvgImage" type="DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v18.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFlEZXZFeHByZXNzLkRhdGEudjE4LjIsIFZlcnNpb249MTguMi42
+        LjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjg4ZDE3NTRkNzAwZTQ5YQUBAAAAHURl
+        dkV4cHJlc3MuVXRpbHMuU3ZnLlN2Z0ltYWdlAQAAAAREYXRhBwICAAAACQMAAAAPAwAAALIDAAAC77u/
+        PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz4NCjxzdmcgeD0iMHB4IiB5PSIwcHgi
+        IHZpZXdCb3g9IjAgMCAzMiAzMiIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcv
+        MjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBlbmFibGUt
+        YmFja2dyb3VuZD0ibmV3IDAgMCAzMiAzMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgaWQ9IkxheWVyXzEi
+        Pg0KICA8ZyBpZD0iT3V0bG9va0V4cG9ydCI+DQogICAgPHBvbHlnb24gcG9pbnRzPSIxNiw0IDI0LDQg
+        MjQsMCAzMiw2IDI0LDEyIDI0LDggMTYsOCAgIiBmaWxsPSIjMDM5QzIzIiBjbGFzcz0iR3JlZW4iIC8+
+        DQogICAgPHBhdGggZD0iTTI1LDE0SDE0VjhMMCwxMi4yVjI4bDE0LDR2LTZoMTFjMC41LDAsMS0wLjUs
+        MS0xVjE1QzI2LDE0LjUsMjUuNSwxNCwyNSwxNHogTTkuMiwyMi45QzguNiwyMy42LDcuOSwyNCw3LDI0
+        ICAgYy0wLjksMC0xLjYtMC40LTIuMi0xLjFDNC4zLDIyLjIsNCwyMS4zLDQsMjAuMWMwLTEuMiwwLjMt
+        Mi4yLDAuOC0zQzUuNCwxNi40LDYuMSwxNiw3LjEsMTZjMC45LDAsMS42LDAuNCwyLjEsMS4xICAgYzAu
+        NSwwLjcsMC44LDEuNywwLjgsMi44QzEwLDIxLjIsOS43LDIyLjIsOS4yLDIyLjl6IE0xNCwxNmg5bC02
+        LDRsLTMtMlYxNnogTTI0LDI0SDE0di00bDMsMmw3LTQuNlYyNHogTTguNCwxNy45ICAgYzAuMywwLjUs
+        MC41LDEuMiwwLjUsMi4xYzAsMC45LTAuMiwxLjYtMC41LDIuMWMtMC4zLDAuNS0wLjgsMC44LTEuNCww
+        LjhjLTAuNiwwLTEtMC4zLTEuNC0wLjhTNS4xLDIwLjksNS4xLDIwICAgYzAtMC45LDAuMi0xLjYsMC41
+        LTIuMUM2LDE3LjQsNi41LDE3LjEsNywxNy4xQzcuNiwxNy4xLDguMSwxNy40LDguNCwxNy45eiIgZmls
+        bD0iIzExNzdENyIgY2xhc3M9IkJsdWUiIC8+DQogIDwvZz4NCjwvc3ZnPgs=
+</value>
+  </data>
   <metadata name="viewDraftBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>246, 17</value>
   </metadata>
