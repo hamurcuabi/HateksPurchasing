@@ -83,7 +83,7 @@ namespace HateksPurchasing
 
         private void CreateMdiForm(DevExpress.XtraEditors.XtraForm form)
         {
-            if (SessionHelper.member.FormPermId == 888)
+            if (SessionHelper.member.FormPermId == 888 || SessionHelper.member.FormPermId == 999)
             {
                 form.MdiParent = this;
                 form.Show();
