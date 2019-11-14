@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
 using HateksPurchasing.Helper;
+using static HateksPurchasing.HateksPurchasingDataSet;
 
 namespace HateksPurchasing
 {
@@ -31,6 +32,7 @@ namespace HateksPurchasing
             {
                 btnAdd.Enabled = false;
                 btnEdit.Enabled = false;
+                btnExport.Enabled = false;
             }
         }
 
@@ -79,10 +81,11 @@ namespace HateksPurchasing
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             object cell = gridView1.GetFocusedRowCellValue("ID");
-            if (cell != null) {
+            if (cell != null)
+            {
                 id = Int32.Parse(cell.ToString());
             }
-               
+
         }
 
         private void gridControl1_Click(object sender, EventArgs e)
@@ -94,6 +97,14 @@ namespace HateksPurchasing
         {
             this.viewDraftTableAdapter.ClearBeforeFill = true;
             this.viewDraftTableAdapter.Fill(this.hateksPurchasingDataSet.ViewDraft);
+            //gridView1.ExportToXlsx("test.xlsx");
+
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            Exporting dialog = new Exporting();
+            dialog.ShowDialog();
         }
     }
 }
